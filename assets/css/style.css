@@ -18,7 +18,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #010e1b;
+  background: url('../img/background/pla.jpg') no-repeat center center fixed;
   background-size: cover;
   left: 0;
   right: 0;
