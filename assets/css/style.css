@@ -45,7 +45,31 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+#contacts {
+  background: url('../img/background/contact.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  left: 0;
+  right: 0;
+  top: 50;
+  height: 100vh;
+
+}
+
+
+
+#about {
+  background: url('../img/background/About.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  left: 0;
+  right: 0;
+  top: 50;
+  height: 200vh; 
+}
+
 /*--------------------------------------------------------------
+
 # Header
 --------------------------------------------------------------*/
 #header {
