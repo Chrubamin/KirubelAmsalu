@@ -635,8 +635,8 @@
           <div class="skill-card"><img src="assets/img/skills/monochromator.jpg" alt="ICCD-Mono"><p>ICCD-Monochromator</p></div>
           <div class="skill-card"><img src="assets/img/skills/Raman.jpg" alt="Raman"><p>Raman Spectroscopy</p></div>
           <div class="skill-card"><img src="assets/img/skills/LIF.png" alt="LIF"><p>Laser Induced Fluorescence</p></div>
-          <div class="skill-card"><img src="assets/img/skills/OPA.jpg" alt="OPA"><p>OPA Laser</p></div>
-          <div class="skill-card"><img src="assets/img/skills/SR400.jpg" alt="SR400"><p>Gated Photon Counter</p></div>
+          <div class="skill-card"><img src="assets/img/skills/OPA.JPG" alt="OPA Laser"><p>OPA Laser</p></div>
+          <div class="skill-card"><img src="assets/img/skills/SR400.JPG" alt="Gated Photon Counter"><p>Gated Photon Counter</p></div>
           <div class="skill-card"><img src="assets/img/skills/XRD.jpeg" alt="XRD"><p>X-ray Diffraction</p></div>
           <div class="skill-card"><img src="assets/img/skills/UVAS.jpg" alt="UVAS"><p>UV Absorption Spectroscopy</p></div>
           <div class="skill-card"><img src="assets/img/skills/DG535.jpg" alt="DG535"><p>Delay Generator DG535</p></div>
@@ -772,7 +772,7 @@
 
   <!-- AOS Animate on Scroll -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ duration: 700, once: false, offset: 0, delay: 0 });</script>
+  <script>AOS.init({ duration: 700, once: true, offset: 0, delay: 0 });</script>
 
   <!-- Back to top button -->
   <a href="#header" class="back-to-top" id="backToTop" title="Back to top">
@@ -850,41 +850,100 @@
   })();
   </script>
 
-  <!-- Hero canvas: floating plasma particles -->
+  <!-- Hero canvas: plasma discharge species animation -->
   <script>
   (function() {
     var canvas = document.getElementById('hero-canvas');
     if (!canvas) return;
     var ctx = canvas.getContext('2d');
+
+    // Plasma species definitions: label, color, size, speed multiplier, type
+    var SPECIES = [
+      // Electrons — fast, tiny, bright blue-white
+      { label: 'e⁻', color: '#a0d8ff', size: 11, speed: 2.4, type: 'electron' },
+      { label: 'e⁻', color: '#c0e8ff', size: 10, speed: 2.8, type: 'electron' },
+      { label: 'e⁻', color: '#80ccff', size: 11, speed: 2.2, type: 'electron' },
+      { label: 'e⁻', color: '#b0dfff', size: 10, speed: 3.0, type: 'electron' },
+      { label: 'e⁻', color: '#90d4ff', size: 11, speed: 2.6, type: 'electron' },
+      // Ions — medium speed, green (Ar⁺ dominant in lab)
+      { label: 'Ar⁺', color: '#12d640', size: 13, speed: 0.6, type: 'ion' },
+      { label: 'Ar⁺', color: '#18e850', size: 13, speed: 0.5, type: 'ion' },
+      { label: 'CF₃⁺', color: '#30e860', size: 12, speed: 0.4, type: 'ion' },
+      { label: 'O⁺',  color: '#20d848', size: 12, speed: 0.7, type: 'ion' },
+      { label: 'F⁻',  color: '#10c038', size: 12, speed: 0.5, type: 'ion' },
+      // OH radicals — orange, fast
+      { label: 'OH•', color: '#ff8c42', size: 13, speed: 1.4, type: 'radical' },
+      { label: 'OH•', color: '#ffa060', size: 13, speed: 1.2, type: 'radical' },
+      { label: '•OH',  color: '#ff9050', size: 12, speed: 1.5, type: 'radical' },
+      // F atoms — cyan
+      { label: 'F•',  color: '#00e5ff', size: 13, speed: 1.8, type: 'radical' },
+      { label: 'F•',  color: '#40f0ff', size: 12, speed: 2.0, type: 'radical' },
+      { label: 'F•',  color: '#20e8ff', size: 13, speed: 1.6, type: 'radical' },
+      // O atoms — warm yellow
+      { label: 'O•',  color: '#ffe066', size: 12, speed: 1.3, type: 'radical' },
+      { label: 'O•',  color: '#ffd040', size: 12, speed: 1.5, type: 'radical' },
+      // NO radical — magenta/pink (important in plasma)
+      { label: 'NO•', color: '#ff6eb4', size: 13, speed: 0.9, type: 'radical' },
+      { label: 'NO•', color: '#ff80c0', size: 12, speed: 1.0, type: 'radical' },
+      // CF₂ radical — purple (important in CF4 plasma)
+      { label: 'CF₂', color: '#b47cff', size: 13, speed: 0.7, type: 'neutral' },
+      { label: 'CF₂', color: '#c890ff', size: 12, speed: 0.6, type: 'neutral' },
+      { label: 'CF₂•', color: '#a060ee', size: 12, speed: 0.8, type: 'neutral' },
+      // Ozone — teal
+      { label: 'O₃',  color: '#00e0c0', size: 12, speed: 0.5, type: 'neutral' },
+      { label: 'O₃',  color: '#20f0d0', size: 12, speed: 0.6, type: 'neutral' },
+      // Heavy neutrals — slow, dim
+      { label: 'CF₄', color: '#7090b0', size: 12, speed: 0.25, type: 'neutral' },
+      { label: 'CF₄', color: '#608090', size: 12, speed: 0.20, type: 'neutral' },
+      { label: 'Ar',      color: '#4db86a', size: 12, speed: 0.30, type: 'neutral' },
+      { label: 'Ar',      color: '#3da050', size: 12, speed: 0.28, type: 'neutral' },
+      { label: 'Ar',      color: '#5dc080', size: 12, speed: 0.32, type: 'neutral' },
+      // N₂ molecule — light blue (plasma bg)
+      { label: 'N₂',  color: '#80a8e8', size: 11, speed: 0.35, type: 'neutral' },
+      // H₂O₂ (from water plasma)
+      { label: 'H₂O₂', color: '#e080c0', size: 11, speed: 0.40, type: 'neutral' }
+    ];
+
     var particles = [];
-    var N = 60;
+
     function resize() {
       canvas.width  = canvas.offsetWidth;
       canvas.height = canvas.offsetHeight;
-    }
-    window.addEventListener('resize', resize);
-    resize();
-    for (var i = 0; i < N; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        r: Math.random() * 2 + 0.5,
-        dx: (Math.random() - 0.5) * 0.5,
-        dy: (Math.random() - 0.5) * 0.5,
-        a: Math.random()
+      // Rebuild particles on resize to fill canvas
+      particles = [];
+      SPECIES.forEach(function(sp) {
+        var angle = Math.random() * Math.PI * 2;
+        particles.push({
+          label:  sp.label,
+          color:  sp.color,
+          size:   sp.size,
+          type:   sp.type,
+          x:  Math.random() * canvas.width,
+          y:  Math.random() * canvas.height,
+          dx: Math.cos(angle) * sp.speed * (0.7 + Math.random() * 0.6),
+          dy: Math.sin(angle) * sp.speed * (0.7 + Math.random() * 0.6),
+          a:  Math.random() * Math.PI * 2,   // phase for pulsing
+          da: 0.015 + Math.random() * 0.015  // pulse speed
+        });
       });
     }
+
+    window.addEventListener('resize', resize);
+    resize();
+
     function draw() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      // Draw connection lines between nearby particles
+
+      // Draw faint collision trails between nearby species
       for (var i = 0; i < particles.length; i++) {
         for (var j = i + 1; j < particles.length; j++) {
-          var dx = particles[i].x - particles[j].x;
-          var dy = particles[i].y - particles[j].y;
-          var dist = Math.sqrt(dx*dx + dy*dy);
-          if (dist < 120) {
-            ctx.strokeStyle = 'rgba(18,214,64,' + (0.15 * (1 - dist/120)) + ')';
-            ctx.lineWidth = 0.6;
+          var ddx = particles[i].x - particles[j].x;
+          var ddy = particles[i].y - particles[j].y;
+          var dist = Math.sqrt(ddx*ddx + ddy*ddy);
+          if (dist < 100) {
+            var alpha = 0.12 * (1 - dist / 100);
+            ctx.strokeStyle = 'rgba(18,214,64,' + alpha + ')';
+            ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -892,21 +951,49 @@
           }
         }
       }
-      // Draw particles
+
+      // Draw each species label
       particles.forEach(function(p) {
-        p.a += 0.012;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(18,214,64,' + (0.5 + 0.5 * Math.sin(p.a)) + ')';
-        ctx.fill();
-        p.x += p.dx; p.y += p.dy;
-        if (p.x < 0) p.x = canvas.width;
-        if (p.x > canvas.width) p.x = 0;
-        if (p.y < 0) p.y = canvas.height;
-        if (p.y > canvas.height) p.y = 0;
+        p.a += p.da;
+        var pulse = 0.55 + 0.45 * Math.sin(p.a);  // 0.1 – 1.0
+
+        // Glow halo for radicals and ions
+        if (p.type === 'electron' || p.type === 'radical' || p.type === 'ion') {
+          ctx.save();
+          ctx.globalAlpha = pulse * 0.25;
+          ctx.shadowColor = p.color;
+          ctx.shadowBlur  = 12;
+          ctx.fillStyle   = p.color;
+          ctx.font = 'bold ' + (p.size + 2) + 'px "Courier New", monospace';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(p.label, p.x, p.y);
+          ctx.restore();
+        }
+
+        // Main label
+        ctx.save();
+        ctx.globalAlpha = 0.35 + 0.65 * pulse;
+        ctx.fillStyle   = p.color;
+        ctx.font = 'bold ' + p.size + 'px "Courier New", monospace';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(p.label, p.x, p.y);
+        ctx.restore();
+
+        // Move
+        p.x += p.dx;
+        p.y += p.dy;
+        // Wrap around edges
+        if (p.x < -30)              p.x = canvas.width  + 20;
+        if (p.x > canvas.width + 30) p.x = -20;
+        if (p.y < -20)              p.y = canvas.height + 10;
+        if (p.y > canvas.height + 20) p.y = -10;
       });
+
       requestAnimationFrame(draw);
     }
+
     draw();
   })();
   </script>

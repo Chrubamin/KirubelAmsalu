@@ -138,12 +138,22 @@
     $('#portfolio-flters li').on('click', function() {
       $("#portfolio-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');
-
-      portfolioIsotope.isotope({
-        filter: $(this).data('filter')
-      });
+      portfolioIsotope.isotope({ filter: $(this).data('filter') });
+      // Re-layout after filter to ensure items are positioned correctly
+      setTimeout(function() { portfolioIsotope.isotope('layout'); }, 50);
     });
 
+    // Re-layout when portfolio section becomes visible (section is hidden until nav click)
+    var portfolioSection = document.getElementById('portfolio');
+    if (portfolioSection) {
+      new MutationObserver(function(mutations) {
+        mutations.forEach(function(m) {
+          if (portfolioSection.classList.contains('section-show')) {
+            setTimeout(function() { portfolioIsotope.isotope('layout'); }, 400);
+          }
+        });
+      }).observe(portfolioSection, { attributes: true, attributeFilter: ['class'] });
+    }
   });
 
   // Initiate venobox (lightbox feature used in portofilo)
