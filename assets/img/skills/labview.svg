@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#003b71" rx="12"/>
+  <!-- LabVIEW diamond symbol -->
+  <polygon points="100,20 160,100 100,180 40,100" fill="#f0c515" stroke="#fff" stroke-width="2"/>
+  <polygon points="100,45 140,100 100,155 60,100" fill="#003b71"/>
+  <circle cx="100" cy="100" r="18" fill="#f0c515"/>
+  <!-- Text -->
+  <text x="100" y="196" font-family="Arial,sans-serif" font-size="22" font-weight="bold" 
+        fill="#f0c515" text-anchor="middle" dy="-4">LabVIEW</text>
+</svg>

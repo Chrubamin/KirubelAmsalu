@@ -66,6 +66,7 @@
   <!-- End Google Tag Manager (noscript) -->
   <!-- ======= Header ======= -->
   <header id="header" class="header-tops">
+    <canvas id="hero-canvas"></canvas>
     <div class="container">
       <h1><a href="index.html"> KIRUBEL AMSALU <span style="font-size:0.5em;">(Ph.D)</span> </a></h1>
       <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
@@ -362,7 +363,7 @@
           <div class="stat-label">Publications</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number" id="stat-cit">220+</div>
+          <div class="stat-number" id="stat-cit">0<span id="stat-cit-plus" style="opacity:0">+</span></div>
           <div class="stat-label">Citations</div>
         </div>
         <div class="stat-item">
@@ -638,6 +639,7 @@
           <div class="skill-card"><img src="assets/img/skills/SR400.jpg" alt="SR400"><p>Gated Photon Counter</p></div>
           <div class="skill-card"><img src="assets/img/skills/XRD.jpeg" alt="XRD"><p>X-ray Diffraction</p></div>
           <div class="skill-card"><img src="assets/img/skills/UVAS.jpg" alt="UVAS"><p>UV Absorption Spectroscopy</p></div>
+          <div class="skill-card"><img src="assets/img/skills/DG535.jpg" alt="DG535"><p>Delay Generator DG535</p></div>
         </div>
       </div>
 
@@ -652,6 +654,7 @@
           <div class="skill-card"><img src="assets/img/skills/octave.png" alt="GNU Octave"><p>GNU Octave — Beginner</p></div>
           <div class="skill-card"><img src="assets/img/skills/massive.jpg" alt="MassiveOES"><p>MassiveOES — Advanced</p></div>
           <div class="skill-card"><img src="assets/img/skills/lifbase.jpg" alt="LIFBase"><p>LIFBase — Intermediate</p></div>
+          <div class="skill-card"><img src="assets/img/skills/labview.svg" alt="LabVIEW"><p>LabVIEW — Beginner</p></div>
         </div>
       </div>
 
@@ -713,43 +716,28 @@
 
     </div>
 
-    <!-- Google Form embed -->
+    <!-- Contact Form -->
     <div class="row mt-4" data-aos="fade-up">
       <div class="col-12">
-        <div class="gform-container">
-          <!--
-            SETUP INSTRUCTIONS:
-            1. Go to forms.google.com and create a form with fields:
-               Name, Email, Subject, Message
-            2. Click Send → Embed (<>) → copy the src URL from the iframe code
-            3. Replace YOUR_GOOGLE_FORM_EMBED_URL below with that URL
-            4. Delete the gform-placeholder div and uncomment the iframe
-
-          <iframe
-            src="YOUR_GOOGLE_FORM_EMBED_URL"
-            width="100%"
-            height="680"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            title="Contact Form">
-            Loading...
-          </iframe>
-          -->
-          <div class="gform-placeholder">
-            <h5><i class="bx bx-message-rounded-dots" style="margin-right:8px;"></i>Send a Message</h5>
-            <p style="margin-bottom:14px; font-size:0.9rem;">
-              To activate the contact form, create a <strong style="color:#12d640;">Google Form</strong> with fields:<br>
-              Name · Email · Subject · Message
+        <div class="info-box" style="padding: 28px 30px;">
+          <i class="bx bx-envelope-open" style="font-size:24px; padding:14px; border-radius:50%; background:rgba(18,214,64,0.15); color:#12d640; float:left; margin-right:15px;"></i>
+          <h3 style="color:#12d640; margin: 10px 0 20px 68px;">Send Me a Message</h3>
+          <form id="contactForm" class="contact-form" style="clear:both;">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" id="cf-name" placeholder="Your Full Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" id="cf-email" placeholder="Your Email Address" required>
+              </div>
+            </div>
+            <input type="text" id="cf-subject" placeholder="Subject">
+            <textarea id="cf-message" rows="5" placeholder="Write your message here..." required></textarea>
+            <button type="submit"><i class="bx bx-send" style="margin-right:8px;"></i>Send Message</button>
+            <p style="margin-top:12px; font-size:0.78rem; color:#adb5bd;">
+              This will open your default email client pre-filled with your message.
             </p>
-            <p style="font-size:0.85rem; margin-bottom:18px;">
-              Then embed it here by replacing <code>YOUR_GOOGLE_FORM_EMBED_URL</code><br>in the comment block above.
-            </p>
-            <p style="font-size:0.9rem;">
-              In the meantime, reach me directly at<br>
-              <a href="mailto:kirubelamsalu12@gmail.com" style="color:#12d640; font-weight:600;">kirubelamsalu12@gmail.com</a>
-            </p>
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -791,45 +779,135 @@
     <i class="bx bx-up-arrow-alt"></i>
   </a>
 
-  <!-- Back-to-top: show whenever a section is active (not on home) -->
+  <!-- Back-to-top: show whenever any section is active -->
   <script>
   (function() {
     var btn = document.getElementById('backToTop');
     function updateBackToTop() {
       if (btn) btn.classList.toggle('visible', document.getElementById('header').classList.contains('header-top'));
     }
-    var observer = new MutationObserver(updateBackToTop);
-    observer.observe(document.getElementById('header'), { attributes: true, attributeFilter: ['class'] });
+    new MutationObserver(updateBackToTop)
+      .observe(document.getElementById('header'), { attributes: true, attributeFilter: ['class'] });
   })();
   </script>
 
-  <!-- Projects stats counter — runs once when #portfolio section becomes visible -->
+  <!-- Projects stats counter: counts up, citations includes animated + -->
   <script>
   (function() {
     var ran = false;
-    function animateStats() {
-      if (ran) return;
-      ran = true;
-      [['stat-pubs', 13], ['stat-cit', null], ['stat-h', 7], ['stat-yr', 7]].forEach(function(pair) {
-        var el = document.getElementById(pair[0]);
-        if (!el || pair[1] === null) return;
-        var target = pair[1], current = 0, step = target / (1600 / 16);
-        var t = setInterval(function() {
-          current += step;
-          if (current >= target) { current = target; clearInterval(t); }
-          el.textContent = Math.floor(current);
-        }, 16);
-      });
+    function countUp(el, target, suffix, duration) {
+      var current = 0, step = target / (duration / 16);
+      var t = setInterval(function() {
+        current += step;
+        if (current >= target) {
+          current = target;
+          clearInterval(t);
+          if (suffix) {
+            var plus = document.getElementById('stat-cit-plus');
+            if (plus) { plus.style.opacity = '1'; plus.style.transition = 'opacity 0.4s'; }
+          }
+        }
+        el.childNodes[0].nodeValue = Math.floor(current);
+      }, 16);
     }
-    // Observe when portfolio section gets section-show class
+    function animateStats() {
+      if (ran) return; ran = true;
+      var pubs = document.getElementById('stat-pubs');
+      var cit  = document.getElementById('stat-cit');
+      var h    = document.getElementById('stat-h');
+      var yr   = document.getElementById('stat-yr');
+      if (pubs) { pubs.textContent = '0'; countUp(pubs, 13,  false, 1400); }
+      if (cit)  { cit.childNodes[0].nodeValue = '0'; countUp(cit, 220, true, 1800); }
+      if (h)    { h.textContent = '0';   countUp(h,   7,   false, 1000); }
+      if (yr)   { yr.textContent = '0';  countUp(yr,  7,   false, 1000); }
+    }
     var portfolio = document.getElementById('portfolio');
     if (portfolio) {
-      new MutationObserver(function(mutations) {
-        mutations.forEach(function(m) {
-          if (portfolio.classList.contains('section-show')) animateStats();
-        });
+      new MutationObserver(function() {
+        if (portfolio.classList.contains('section-show')) animateStats();
       }).observe(portfolio, { attributes: true, attributeFilter: ['class'] });
     }
+  })();
+  </script>
+
+  <!-- Contact form: compose mailto on submit -->
+  <script>
+  (function() {
+    var form = document.getElementById('contactForm');
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name    = (document.getElementById('cf-name')   || {}).value || '';
+      var email   = (document.getElementById('cf-email')  || {}).value || '';
+      var subject = (document.getElementById('cf-subject')|| {}).value || 'Message from website';
+      var message = (document.getElementById('cf-message')|| {}).value || '';
+      var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+      var mailto = 'mailto:kirubelamsalu12@gmail.com'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body='    + encodeURIComponent(body);
+      window.location.href = mailto;
+    });
+  })();
+  </script>
+
+  <!-- Hero canvas: floating plasma particles -->
+  <script>
+  (function() {
+    var canvas = document.getElementById('hero-canvas');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var particles = [];
+    var N = 60;
+    function resize() {
+      canvas.width  = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+    for (var i = 0; i < N; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 2 + 0.5,
+        dx: (Math.random() - 0.5) * 0.5,
+        dy: (Math.random() - 0.5) * 0.5,
+        a: Math.random()
+      });
+    }
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Draw connection lines between nearby particles
+      for (var i = 0; i < particles.length; i++) {
+        for (var j = i + 1; j < particles.length; j++) {
+          var dx = particles[i].x - particles[j].x;
+          var dy = particles[i].y - particles[j].y;
+          var dist = Math.sqrt(dx*dx + dy*dy);
+          if (dist < 120) {
+            ctx.strokeStyle = 'rgba(18,214,64,' + (0.15 * (1 - dist/120)) + ')';
+            ctx.lineWidth = 0.6;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      // Draw particles
+      particles.forEach(function(p) {
+        p.a += 0.012;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(18,214,64,' + (0.5 + 0.5 * Math.sin(p.a)) + ')';
+        ctx.fill();
+        p.x += p.dx; p.y += p.dy;
+        if (p.x < 0) p.x = canvas.width;
+        if (p.x > canvas.width) p.x = 0;
+        if (p.y < 0) p.y = canvas.height;
+        if (p.y > canvas.height) p.y = 0;
+      });
+      requestAnimationFrame(draw);
+    }
+    draw();
   })();
   </script>
 
