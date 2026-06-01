@@ -13,9 +13,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Personal Portfolio</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
+  <title>Kirubel Amsalu, Ph.D | Plasma Scientist & Researcher</title>
+  <meta name="description" content="Personal academic website of Kirubel Amsalu, Postdoctoral Researcher at KRISS. Specializing in plasma diagnostics, laser-induced fluorescence, and plasma-based environmental applications.">
+  <meta name="keywords" content="Kirubel Amsalu, plasma science, plasma diagnostics, LIF, laser induced fluorescence, environmental plasma, KRISS, Kwangwoon University, ORCID, plasma physics">
+  <meta property="og:title" content="Kirubel Amsalu, Ph.D | Plasma Scientist">
+  <meta property="og:description" content="Postdoctoral Researcher at KRISS — plasma diagnostics, OH radical reactivity, laser-plasma interaction.">
+  <meta property="og:type" content="website">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -27,6 +30,9 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+  <!-- AOS Animate on Scroll -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -71,9 +77,9 @@
           <li><a href="#experience"> <span>Experience</span></a></li>
 <!--          <li><a href="#projects"> <span>Projects</span></a></li>-->
           <li><a href="#portfolio"> <span>Projects</span></a></li>
+          <li><a href="#publications"> <span>Publications</span></a></li>
           <li><a href="#skills"> <span>Skills</span></a></li>
           <li><a href="https://drive.google.com/file/d/1CdM0ePkAIHpKzuK56HgAEEWf2MLA6uBR/view?usp=sharing" target="_blank"> <span>Resume</span></a></li>
-          <!-- <li><a href="#links"> <span>Resume & Links</span></a></li> -->
           <li><a href="#contacts"> <span>Contact</span></a></li>
 
         </ul>
@@ -97,6 +103,26 @@
         }
       </style>
       
+      <!-- Stats counters -->
+      <div class="hero-stats" style="display:flex; gap:30px; margin-top:30px; flex-wrap:wrap;">
+        <div class="hero-stat-item" style="text-align:center;">
+          <span class="hero-stat-number" style="font-size:2rem; font-weight:700; color:#12d640; font-family:'Poppins',sans-serif;" data-target="13">0</span>
+          <p style="margin:0; color:#dee2e6; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px;">Publications</p>
+        </div>
+        <div class="hero-stat-item" style="text-align:center;">
+          <span class="hero-stat-number" style="font-size:2rem; font-weight:700; color:#12d640; font-family:'Poppins',sans-serif;" data-target="220">0</span><span style="font-size:2rem; font-weight:700; color:#12d640; font-family:'Poppins',sans-serif;">+</span>
+          <p style="margin:0; color:#dee2e6; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px;">Citations</p>
+        </div>
+        <div class="hero-stat-item" style="text-align:center;">
+          <span class="hero-stat-number" style="font-size:2rem; font-weight:700; color:#12d640; font-family:'Poppins',sans-serif;" data-target="7">0</span>
+          <p style="margin:0; color:#dee2e6; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px;">h-index</p>
+        </div>
+        <div class="hero-stat-item" style="text-align:center;">
+          <span class="hero-stat-number" style="font-size:2rem; font-weight:700; color:#12d640; font-family:'Poppins',sans-serif;" data-target="7">0</span>
+          <p style="margin:0; color:#dee2e6; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px;">Years Research</p>
+        </div>
+      </div>
+
       <div class="social-links">
         <a href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=kirubel+amsalu&oq=" target="_blank" class="Google Scholar">
           <img src="assets/img/icons/google.png" alt="Google Scholar" />
@@ -164,7 +190,7 @@
             <div class="col-lg-6">
               <ul>
                 <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Daejeon </li>
-                <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> kirubeamsalu12@gmail.com</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> kirubelamsalu12@gmail.com</li>
               </ul>
             </div>
           </div>
@@ -181,40 +207,43 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-3 col-md-4">
+        <div class="col-lg-3 col-md-4 mt-4" data-aos="fade-up" data-aos-delay="50">
           <div class="icon-box">
-                <h3>Plasma diagnostics</h3>
+            <i class='bx bx-pulse' style="font-size:32px; color:#12d640; padding-right:10px;"></i>
+            <h3>Plasma Diagnostics</h3>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+        <div class="col-lg-3 col-md-4 mt-4" data-aos="fade-up" data-aos-delay="100">
           <div class="icon-box">
-            
-            <h3>Molecular spectroscopy</h3>
+            <i class='bx bx-glasses' style="font-size:32px; color:#12d640; padding-right:10px;"></i>
+            <h3>Molecular Spectroscopy</h3>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+        <div class="col-lg-3 col-md-4 mt-4" data-aos="fade-up" data-aos-delay="150">
           <div class="icon-box">
-            
+            <i class='bx bx-water' style="font-size:32px; color:#12d640; padding-right:10px;"></i>
             <h3>Aqueous Ozonation</h3>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+        <div class="col-lg-3 col-md-4 mt-4" data-aos="fade-up" data-aos-delay="200">
           <div class="icon-box">
-            
-            <h3>Environmetal monitoring</h3>
+            <i class='bx bx-leaf' style="font-size:32px; color:#12d640; padding-right:10px;"></i>
+            <h3>Environmental Monitoring</h3>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 mt-4">
+        <div class="col-lg-3 col-md-4 mt-4" data-aos="fade-up" data-aos-delay="250">
           <div class="icon-box">
-            
-            
+            <i class='bx bx-atom' style="font-size:32px; color:#12d640; padding-right:10px;"></i>
             <h3>Plasma Physics</h3>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 mt-4">
+        <div class="col-lg-3 col-md-4 mt-4" data-aos="fade-up" data-aos-delay="300">
           <div class="icon-box">
-
-
+            <i class='bx bx-search-alt' style="font-size:32px; color:#12d640; padding-right:10px;"></i>
+            <h3>Laser–Plasma Interaction</h3>
+          </div>
+        </div>
+      </div><!-- end row -->
     </div><!-- End Interests -->
   </section><!-- End About Section -->
 
@@ -226,60 +255,48 @@
       <div class="section-title">
         <h2>Education</h2>
       </div>
-      <div class="row">
-        <div class="col-lg-12" data-aos="fade-up" style="display: inline-block;">
-          <div class="row">
-            <!-- PhD in Physics -->
-            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding: 0px; padding-bottom: 5px;">
-              <img src="assets/img/education/Kwangwoon University.png" class="img-fluid" alt="">
-              <p style="text-align:left; color:#fff; font-size: 18px; font-weight: bold; padding: 5px 10px;"><em>PhD in Physics</em></p>
-              <h5 style="text-align:left; padding: 0px 10px;">March 2022 - August 2025</h5>
-              <h6 style="text-align:left; color:#fff; padding: 0px 10px;">Relevant Coursework</h6>
-              <ul style="text-align:left; color:#fff;">
-                <li>Plasma Diagnostics</li>
-                <li>Reactive Nitrogen &amp; Oxygen Species</li>
-                <li>Environmental (water, soil) remediation</li>
-              </ul>
-              <!-- <a href="https://drive.google.com/file/d/11Wq_XBxIDwE09l8BnH44wsOXQUoH4741/view?usp=sharing" target="_blank" style="color: #0ac01a; text-decoration: none; font-weight: bold; padding: 0px 10px;"> -->
-                <!-- Click here for-- Degree  -->
-              </a>
+      <ul class="timeline" data-aos="fade-up">
+
+        <li class="timeline-item">
+          <span class="tl-date">Mar 2022 – Aug 2025</span>
+          <div class="tl-title">PhD in Physics</div>
+          <div class="tl-subtitle">Kwangwoon University, Seoul, South Korea</div>
+          <div class="tl-body">
+            <div class="tl-course-tags">
+              <span>Plasma Diagnostics</span>
+              <span>Reactive N &amp; O Species</span>
+              <span>Environmental Remediation</span>
             </div>
-  
-            <!-- MSc in Mechanical Engineering -->
-            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="200" style="padding: 0px; padding-bottom: 5px;">
-              <img src="assets/img/education/Addis Ababa Science and Technology University.png" class="img-fluid" alt="">
-              <p style="text-align:left; color:#fff; font-size: 18px; font-weight: bold; padding: 5px 10px;"><em>MSc. in Mechanical Engineering</em></p>
-              <h5 style="text-align:left; padding: 0px 10px;">September 2018 - August 2020</h5>
-              <h6 style="text-align:left; color:#fff; padding: 0px 10px;">Relevant Coursework</h6>
-              <ul style="text-align:left; color:#fff;">
-                <li>Nanomaterials Fabrication</li>
-                <li>Finite Element Analysis</li>
-                <li>Advanced Foundry Technology</li>
-              </ul>
-              <!-- <a href="https://drive.google.com/file/d/1US2AeGtM8iP_8jXLXKVJ_bl48e5aG9Bz/view?usp=sharing" target="_blank" style="color: #0ac01a; text-decoration: none; font-weight: bold; padding: 0px 10px;"> -->
-                <!-- Click here for-- Degree  -->
-              </a>
-            </div>
-  
-            <!-- BSc in Manufacturing Engineering -->
-            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="300" style="padding: 0px; padding-bottom: 5px;">
-              <img src="assets/img/education/Addis Ababa Science and Technology University.png" class="img-fluid" alt="">
-              <p style="text-align:left; color:#fff; font-size: 18px; font-weight: bold; padding: 5px 10px;"><em>BSc. in Manufacturing Engineering</em></p>
-              <h5 style="text-align:left; padding: 0px 10px;">September 2013 - July 2018</h5>
-              <h6 style="text-align:left; color:#fff; padding: 0px 10px;">Relevant Coursework</h6>
-              <ul style="text-align:left; color:#fff;">
-                <li>Machine Design</li>
-                <li>Material Science</li>
-                <li>Metallurgy</li>
-              </ul>
-              <!-- <a href="https://drive.google.com/file/d/1Aeb_rHhcPP_5KzMeERfw9V-UX5R31OVR/view?usp=sharing" target="_blank" style="color: #0ac01a; text-decoration: none; font-weight: bold; padding: 0px 10px;"> -->
-                <!-- Click here for-- Degree  -->
-              </a>
-            </div>
-  
           </div>
-        </div>
-      </div>
+        </li>
+
+        <li class="timeline-item">
+          <span class="tl-date">Sep 2018 – Aug 2020</span>
+          <div class="tl-title">MSc. in Mechanical Engineering</div>
+          <div class="tl-subtitle">Addis Ababa Science and Technology University, Ethiopia</div>
+          <div class="tl-body">
+            <div class="tl-course-tags">
+              <span>Nanomaterials Fabrication</span>
+              <span>Finite Element Analysis</span>
+              <span>Advanced Foundry Technology</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <span class="tl-date">Sep 2013 – Jul 2018</span>
+          <div class="tl-title">BSc. in Manufacturing Engineering</div>
+          <div class="tl-subtitle">Addis Ababa Science and Technology University, Ethiopia</div>
+          <div class="tl-body">
+            <div class="tl-course-tags">
+              <span>Machine Design</span>
+              <span>Material Science</span>
+              <span>Metallurgy</span>
+            </div>
+          </div>
+        </li>
+
+      </ul>
     </div>
   </section>
   <!-- End Education Section -->
@@ -287,63 +304,66 @@
 
 
   <!-- Start Experience Section -->
-
   <section id="experience" class="services">
     <div class="container">
       <div class="section-title">
         <h2>Experience</h2>
       </div>
-      <div class="row">
-            <div class="col-lg-12" data-aos="fade-up">
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.kriss.re.kr" style="color:#12d640">Korean Research Institute of Standards and Science </a><br> </h4>
-                <h5 style="text-align:left;">September 2025 - Present</h5>
-                <p style="text-align:left;color:#fff"><em>Postdoctoral Researcher </em></p>
-                <ul style="text-align:left;">
-                  <li>Development of plasma modeling. </li>
-                  <li>OPA laser-LIF based measurement of kinetics of reactive species.  </li>
-                  </ul>
-              </div>
-          <div class="col-lg-12" data-aos="fade-up">
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.kw.ac.kr/en/" style="color:#12d640">Kwangwoon University</a><br> </h4>
-                <h5 style="text-align:left;">March 2022 - August 2025</h5>
-                <p style="text-align:left;color:#fff"><em>PhD Researcher </em></p>
-                <ul style="text-align:left;">
-                  <li>Optimize and characterize various types of plasma devices for efficient degradation of environmental pollutants. </li>
-                  <li>Design and implement experimental setups, develop novel concepts to combat emerging contaminants.  </li>
-                  <li>Publish different experimental results on high-end journals and present them on international conferences. </li>
-                  </ul>
-              </div>
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.kw.ac.kr/en/" style="color:#12d640">Kwangwoon University</a><br> </h4>
-                <h5 style="text-align:left;">September 2023 - December 2023, March 2024 - July 2024,September 2024 - December 2024, March 2025 - July 2025 </h5>
-                <p style="text-align:left;color:#fff"><em>Teaching Assistant </em></p>
-                <ul style="text-align:left;">
-                  <li>Handling experimental sessions for the "Kwangwoon-Vertically Integrated Project (KW-VIP)" course under the supervision of Prof. Eun Ha Choi. </li>
-                  <li>Teaching undergraduate students from various disciplines in understanding fundamental electrical circuits.  </li>
-                  <li>Instructing students on assembling and building an inverter circuit for plasma generation, constructing plasma devices, and analyzing their electrical characteristics. </li>
-                  <li>Providing hands-on troubleshooting support during the experimental sessions to ensure students gained practical experience.</li>
-                </ul>
-              </div>
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.aastu.edu.et/" style="color:#12d640">Addis Ababa Science and Technology University</a><br> </h4>
-                <h5 style="text-align:left;">September 2018 - September 2020</h5>
-                <p style="text-align:left;color:#fff"><em>Academic and Research Assistant</em></p>
-                <ul style="text-align:left;">
-                  <li>Supervise undergraduate students on final year projects.</li>
-                  <li>Developing start-up projects</li>
-                  <li>Developing and leading a project on urban farming to promote food security.</li>
-                </ul>
-              </div>
+      <ul class="timeline" data-aos="fade-up">
 
-             
-                          </div>
+        <li class="timeline-item">
+          <span class="tl-date">Sep 2025 – Present</span>
+          <div class="tl-title"><a href="https://www.kriss.re.kr" style="color:#fff; text-decoration:none;">Korean Research Institute of Standards and Science (KRISS)</a></div>
+          <div class="tl-subtitle">Postdoctoral Researcher</div>
+          <div class="tl-body">
+            <ul>
+              <li>Development of plasma modeling.</li>
+              <li>OPA laser-LIF based measurement of kinetics of reactive species.</li>
+            </ul>
           </div>
-        </div>
+        </li>
+
+        <li class="timeline-item">
+          <span class="tl-date">Mar 2022 – Aug 2025</span>
+          <div class="tl-title"><a href="https://www.kw.ac.kr/en/" style="color:#fff; text-decoration:none;">Kwangwoon University</a></div>
+          <div class="tl-subtitle">PhD Researcher</div>
+          <div class="tl-body">
+            <ul>
+              <li>Optimize and characterize plasma devices for environmental pollutant degradation.</li>
+              <li>Design experimental setups and develop novel concepts to combat emerging contaminants.</li>
+              <li>Publish research in high-impact journals and present at international conferences.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <span class="tl-date">Sep 2023 – Jul 2025 (multiple terms)</span>
+          <div class="tl-title"><a href="https://www.kw.ac.kr/en/" style="color:#fff; text-decoration:none;">Kwangwoon University</a></div>
+          <div class="tl-subtitle">Teaching Assistant — KW-VIP Course</div>
+          <div class="tl-body">
+            <ul>
+              <li>Led experimental sessions on fundamental electrical circuits and plasma generation.</li>
+              <li>Guided students in assembling inverter circuits for plasma devices and analyzing electrical characteristics.</li>
+              <li>Provided hands-on troubleshooting support during lab sessions.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <span class="tl-date">Sep 2018 – Sep 2020</span>
+          <div class="tl-title"><a href="https://www.aastu.edu.et/" style="color:#fff; text-decoration:none;">Addis Ababa Science and Technology University</a></div>
+          <div class="tl-subtitle">Academic and Research Assistant</div>
+          <div class="tl-body">
+            <ul>
+              <li>Supervised undergraduate final year projects.</li>
+              <li>Developed and led a project on urban farming to promote food security.</li>
+            </ul>
+          </div>
+        </li>
+
+      </ul>
     </div>
   </section>
-
   <!-- End Experience Section -->
 
 
@@ -516,19 +536,19 @@
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
-          <center><h4>Textile dye removal using nitrix oxide species </h4></center>
+          <center><h4>Textile dye removal using nitric oxide species</h4></center>
           <div class="portfolio-wrap">
             <img src="assets/img/project/Textile Dye.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              
-              <a href="https://doi.org/10.1016/j.jenvman.2024.122554 " target="_blank" rel="noopener noreferrer" title="Project Details">
-                <i class="bx bx-info-circle" style="font-size: 32px;"></i> <!-- Adjust the size here -->
-              </a>
+              <div class="portfolio-links">
+                <a href="https://doi.org/10.1016/j.jenvman.2024.122554" target="_blank" rel="noopener noreferrer" title="Project Details">
+                  <i class="bx bx-info-circle"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-        
+
         <div class="col-lg-4 col-md-6 portfolio-item filter-personal">
           <center><h4>NTP promoting cellulase production</h4></center>
           <div class="portfolio-wrap">
@@ -542,9 +562,103 @@
             </div>
           </div>
         </div>
+      </div><!-- end portfolio-container -->
   </section>
 
   <!-- End Project Section -->
+
+
+  <!-- ======= Publications Section ======= -->
+  <section id="publications" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Publications</h2>
+      </div>
+
+      <div class="pub-filters" data-aos="fade-up">
+        <button class="pub-filter-btn active" data-pub-filter="all">All</button>
+        <button class="pub-filter-btn" data-pub-filter="personal">First Author</button>
+        <button class="pub-filter-btn" data-pub-filter="collaborative">Collaborative</button>
+      </div>
+
+      <div id="pub-list" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="pub-item" data-pub-type="personal">
+          <p class="pub-title">Pesticide degradation from green coffee beans using non-thermal plasma</p>
+          <p class="pub-meta"><span class="pub-journal">Chemical Engineering Journal</span> &middot; 2024</p>
+          <a href="https://doi.org/10.1016/j.cej.2024.154364" target="_blank" class="pub-doi">DOI &rarr;</a>
+        </div>
+
+        <div class="pub-item" data-pub-type="personal">
+          <p class="pub-title">Dibutyl phthalate removal from water using OH radicals generated by non-thermal plasma</p>
+          <p class="pub-meta"><span class="pub-journal">Chemical Engineering Journal</span> &middot; 2024</p>
+          <a href="https://doi.org/10.1016/j.cej.2024.157895" target="_blank" class="pub-doi">DOI &rarr;</a>
+        </div>
+
+        <div class="pub-item" data-pub-type="personal">
+          <p class="pub-title">Non-thermal plasma promoting cellulase production</p>
+          <p class="pub-meta"><span class="pub-journal">Bioresources and Bioprocessing</span> &middot; 2025</p>
+          <a href="https://doi.org/10.1186/s40643-025-01006-z#Abs1" target="_blank" class="pub-doi">DOI &rarr;</a>
+        </div>
+
+        <div class="pub-item" data-pub-type="collaborative">
+          <p class="pub-title">Spatial and temporal diagnostics of OH radicals in atmospheric pressure plasma jet</p>
+          <p class="pub-meta"><span class="pub-journal">Physics of Fluids</span> &middot; 2025</p>
+          <a href="https://doi.org/10.1063/5.0272728" target="_blank" class="pub-doi">DOI &rarr;</a>
+        </div>
+
+        <div class="pub-item" data-pub-type="collaborative">
+          <p class="pub-title">Carbamazepine degradation using APPJ-generated reactive species</p>
+          <p class="pub-meta"><span class="pub-journal">Journal of Environmental Chemical Engineering</span> &middot; 2025</p>
+          <a href="https://doi.org/10.1016/j.jece.2025.117644" target="_blank" class="pub-doi">DOI &rarr;</a>
+        </div>
+
+        <div class="pub-item" data-pub-type="collaborative">
+          <p class="pub-title">Synergy between plasma water and seaweed biostimulants in tomato cultivation</p>
+          <p class="pub-meta"><span class="pub-journal">Food Chemistry</span> &middot; 2025</p>
+          <a href="https://doi.org/10.1016/j.foodchem.2025.144747" target="_blank" class="pub-doi">DOI &rarr;</a>
+        </div>
+
+        <div class="pub-item" data-pub-type="collaborative">
+          <p class="pub-title">Enhancing growth and salinity tolerance of Pak Choi plants using plasma-activated water</p>
+          <p class="pub-meta"><span class="pub-journal">Fundamental Research</span> &middot; 2024</p>
+          <a href="https://doi.org/10.1016/j.fmre.2024.06.010" target="_blank" class="pub-doi">DOI &rarr;</a>
+        </div>
+
+        <div class="pub-item" data-pub-type="collaborative">
+          <p class="pub-title">Surface activation of polyvinyl alcohol films using non-thermal plasma</p>
+          <p class="pub-meta"><span class="pub-journal">Plasma Processes and Polymers</span> &middot; 2023</p>
+          <a href="https://doi.org/10.1002/ppap.202300102" target="_blank" class="pub-doi">DOI &rarr;</a>
+        </div>
+
+        <div class="pub-item" data-pub-type="collaborative">
+          <p class="pub-title">Total petroleum hydrocarbon removal from contaminated soil using ozone gas</p>
+          <p class="pub-meta"><span class="pub-journal">Environmental Research</span> &middot; 2023</p>
+          <a href="https://doi.org/10.1016/j.envres.2023.117398" target="_blank" class="pub-doi">DOI &rarr;</a>
+        </div>
+
+        <div class="pub-item" data-pub-type="collaborative">
+          <p class="pub-title">Ampicillin removal from water using atmospheric pressure plasma jet discharge</p>
+          <p class="pub-meta"><span class="pub-journal">Journal of Environmental Chemical Engineering</span> &middot; 2024</p>
+          <a href="https://doi.org/10.1016/j.jece.2024.113445" target="_blank" class="pub-doi">DOI &rarr;</a>
+        </div>
+
+        <div class="pub-item" data-pub-type="collaborative">
+          <p class="pub-title">Dual duty cycle for selective generation of reactive plasma species</p>
+          <p class="pub-meta"><span class="pub-journal">Plasma Processes and Polymers</span> &middot; 2024</p>
+          <a href="https://doi.org/10.1002/ppap.202400098" target="_blank" class="pub-doi">DOI &rarr;</a>
+        </div>
+
+        <div class="pub-item" data-pub-type="collaborative">
+          <p class="pub-title">Textile dye removal using nitric oxide species from non-thermal plasma</p>
+          <p class="pub-meta"><span class="pub-journal">Journal of Environmental Management</span> &middot; 2024</p>
+          <a href="https://doi.org/10.1016/j.jenvman.2024.122554" target="_blank" class="pub-doi">DOI &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End Publications Section -->
 
 
 
@@ -636,48 +750,46 @@
                   
                 </p>
             </div>
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#ffffff">
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background:#ffffff">
               <h4 style="text-align:left;color:#09203a">Software</h4>
-                <p style="text-align:left;">
+              <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
 
-                  <div style="text-align: center;">
-                      <img src="assets/img/skills/office.jpg" class="img-fluid" alt="CD" height="50" width="150">
-                      <p style="color: black; font-weight: bold;">MS Office- Advanced</p>
-                    </div>
+                <div style="text-align: center;">
+                  <img src="assets/img/skills/office.jpg" class="img-fluid" alt="MS Office" height="50" width="150">
+                  <p style="color: black; font-weight: bold;">MS Office — Advanced</p>
+                </div>
 
-                    <div style="text-align: center;">
-                      <img src="assets/img/skills/origin.png" class="img-fluid" alt="CD" height="50" width="150">
-                      <p style="color: black; font-weight: bold;">Orgin pro- Advanced</p>
-                    </div>  
+                <div style="text-align: center;">
+                  <img src="assets/img/skills/origin.png" class="img-fluid" alt="Origin Pro" height="50" width="150">
+                  <p style="color: black; font-weight: bold;">Origin Pro — Advanced</p>
+                </div>
 
-                    <div style="text-align: center;">
-                      <img src="assets/img/skills/python.png" class="img-fluid" alt="CD" height="50" width="150">
-                      <p style="color: black; font-weight: bold;">Python- Beginner</p>
-                    </div>
+                <div style="text-align: center;">
+                  <img src="assets/img/skills/python.png" class="img-fluid" alt="Python" height="50" width="150">
+                  <p style="color: black; font-weight: bold;">Python — Beginner</p>
+                </div>
 
-                    <div style="text-align: center;">
-                      <img src="assets/img/skills/matlab.png" class="img-fluid" alt="CD" height="50" width="150">
-                      <p style="color: black; font-weight: bold;">Matlab- Beginner</p>
-                    </div>
+                <div style="text-align: center;">
+                  <img src="assets/img/skills/matlab.png" class="img-fluid" alt="MATLAB" height="50" width="150">
+                  <p style="color: black; font-weight: bold;">MATLAB — Beginner</p>
+                </div>
 
-                    <div style="text-align: center;">
-                      <img src="assets/img/skills/octave.png" class="img-fluid" alt="CD" height="50" width="150">
-                      <p style="color: black; font-weight: bold;">GNU Octave- Begineer</p>
-                    </div>
+                <div style="text-align: center;">
+                  <img src="assets/img/skills/octave.png" class="img-fluid" alt="GNU Octave" height="50" width="150">
+                  <p style="color: black; font-weight: bold;">GNU Octave — Beginner</p>
+                </div>
 
-                    <div style="text-align: center;">
-                      <img src="assets/img/skills/massive.jpg" class="img-fluid" alt="CD" height="50" width="150">
-                      <p style="color: black; font-weight: bold;">MassiveOES- Advanced</p>
-                    </div>
+                <div style="text-align: center;">
+                  <img src="assets/img/skills/massive.jpg" class="img-fluid" alt="MassiveOES" height="50" width="150">
+                  <p style="color: black; font-weight: bold;">MassiveOES — Advanced</p>
+                </div>
 
-                    <div style="text-align: center;">
-                      <img src="assets/img/skills/lifbase.jpg" class="img-fluid" alt="CD" height="50" width="150">
-                      <p style="color: black; font-weight: bold;">LIFBase- Intermediate</p>
-                    </div>
+                <div style="text-align: center;">
+                  <img src="assets/img/skills/lifbase.jpg" class="img-fluid" alt="LIFBase" height="50" width="150">
+                  <p style="color: black; font-weight: bold;">LIFBase — Intermediate</p>
+                </div>
 
-                    
-            
-              </p>
+              </div>
           </div>
         </div>
       </div>
@@ -740,16 +852,29 @@
 
     </div>
 
-    <!-- Optional: Web Counter (currently commented out) -->
-    <!--
-    <div id="sfczmlqxr5caww28rswrt8849ghbekgnh3j"></div>
-    <script type="text/javascript" src="https://counter1.stat.ovh/private/counter.js?c=zmlqxr5caww28rswrt8849ghbekgnh3j&down=async" async></script>
-    <noscript>
-      <a href="https://www.freecounterstat.com" title="free web counter">
-        <img src="https://counter1.stat.ovh/private/freecounterstat.php?c=zmlqxr5caww28rswrt8849ghbekgnh3j" border="0" title="free web counter" alt="free web counter">
-      </a>
-    </noscript>
-    -->
+    <!-- Contact Form -->
+    <div class="row mt-4" data-aos="fade-up">
+      <div class="col-12">
+        <div class="info-box">
+          <i class="bx bx-message-rounded-dots"></i>
+          <h3>Send a Message</h3>
+          <form class="contact-form mt-3" id="contactForm" action="https://formspree.io/f/xwkgvnak" method="POST">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" name="email" placeholder="Your Email" required>
+              </div>
+            </div>
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
+            <button type="submit">Send Message</button>
+            <div class="form-msg" id="formMsg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
 
   </div>
 </section>
@@ -778,6 +903,86 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- AOS Animate on Scroll -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 700, once: true });</script>
+
+  <!-- Back to top button -->
+  <a href="#header" class="back-to-top" id="backToTop" title="Back to top">
+    <i class="bx bx-up-arrow-alt"></i>
+  </a>
+
+  <!-- Publication filter -->
+  <script>
+  document.querySelectorAll('.pub-filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.pub-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      var filter = this.getAttribute('data-pub-filter');
+      document.querySelectorAll('#pub-list .pub-item').forEach(function(item) {
+        item.style.display = (filter === 'all' || item.getAttribute('data-pub-type') === filter) ? 'block' : 'none';
+      });
+    });
+  });
+  </script>
+
+  <!-- Back to top visibility -->
+  <script>
+  window.addEventListener('scroll', function() {
+    var btn = document.getElementById('backToTop');
+    if (btn) { btn.classList.toggle('visible', window.scrollY > 300); }
+  });
+  </script>
+
+  <!-- Contact form AJAX -->
+  <script>
+  var form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var msg = document.getElementById('formMsg');
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(r) {
+        if (r.ok) {
+          msg.className = 'form-msg success';
+          msg.textContent = 'Message sent! I will get back to you soon.';
+          form.reset();
+        } else {
+          msg.className = 'form-msg error';
+          msg.textContent = 'Something went wrong. Please email me directly.';
+        }
+      }).catch(function() {
+        msg.className = 'form-msg error';
+        msg.textContent = 'Network error. Please email me directly.';
+      });
+    });
+  }
+  </script>
+
+  <!-- Hero stat counters -->
+  <script>
+  (function() {
+    function animateCounters() {
+      document.querySelectorAll('.hero-stat-number').forEach(function(el) {
+        var target = parseInt(el.getAttribute('data-target'), 10);
+        var duration = 1800;
+        var step = target / (duration / 16);
+        var current = 0;
+        var timer = setInterval(function() {
+          current += step;
+          if (current >= target) { current = target; clearInterval(timer); }
+          el.textContent = Math.floor(current);
+        }, 16);
+      });
+    }
+    // Run once when header is visible (on page load)
+    window.addEventListener('load', function() { setTimeout(animateCounters, 600); });
+  })();
+  </script>
 
 </body>
 
