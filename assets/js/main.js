@@ -31,10 +31,12 @@
           setTimeout(function() {
             $("section").removeClass('section-show');
             $(hash).addClass('section-show');
+            if (typeof AOS !== 'undefined') AOS.refresh();
           }, 350);
         } else {
           $("section").removeClass('section-show');
           $(hash).addClass('section-show');
+          if (typeof AOS !== 'undefined') AOS.refresh();
         }
 
         if ($('body').hasClass('mobile-nav-active')) {
@@ -59,6 +61,7 @@
       setTimeout(function() {
         $("section").removeClass('section-show');
         $(initial_nav).addClass('section-show');
+        if (typeof AOS !== 'undefined') AOS.refresh();
       }, 350);
     }
   }

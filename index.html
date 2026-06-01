@@ -77,7 +77,6 @@
           <li><a href="#experience"> <span>Experience</span></a></li>
 <!--          <li><a href="#projects"> <span>Projects</span></a></li>-->
           <li><a href="#portfolio"> <span>Projects</span></a></li>
-          <li><a href="#publications"> <span>Publications</span></a></li>
           <li><a href="#skills"> <span>Skills</span></a></li>
           <li><a href="https://drive.google.com/file/d/1CdM0ePkAIHpKzuK56HgAEEWf2MLA6uBR/view?usp=sharing" target="_blank"> <span>Resume</span></a></li>
           <li><a href="#contacts"> <span>Contact</span></a></li>
@@ -103,26 +102,6 @@
         }
       </style>
       
-      <!-- Stats counters -->
-      <div class="hero-stats" style="display:flex; gap:30px; margin-top:30px; flex-wrap:wrap;">
-        <div class="hero-stat-item" style="text-align:center;">
-          <span class="hero-stat-number" style="font-size:2rem; font-weight:700; color:#12d640; font-family:'Poppins',sans-serif;" data-target="13">0</span>
-          <p style="margin:0; color:#dee2e6; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px;">Publications</p>
-        </div>
-        <div class="hero-stat-item" style="text-align:center;">
-          <span class="hero-stat-number" style="font-size:2rem; font-weight:700; color:#12d640; font-family:'Poppins',sans-serif;" data-target="220">0</span><span style="font-size:2rem; font-weight:700; color:#12d640; font-family:'Poppins',sans-serif;">+</span>
-          <p style="margin:0; color:#dee2e6; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px;">Citations</p>
-        </div>
-        <div class="hero-stat-item" style="text-align:center;">
-          <span class="hero-stat-number" style="font-size:2rem; font-weight:700; color:#12d640; font-family:'Poppins',sans-serif;" data-target="7">0</span>
-          <p style="margin:0; color:#dee2e6; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px;">h-index</p>
-        </div>
-        <div class="hero-stat-item" style="text-align:center;">
-          <span class="hero-stat-number" style="font-size:2rem; font-weight:700; color:#12d640; font-family:'Poppins',sans-serif;" data-target="7">0</span>
-          <p style="margin:0; color:#dee2e6; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px;">Years Research</p>
-        </div>
-      </div>
-
       <div class="social-links">
         <a href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=kirubel+amsalu&oq=" target="_blank" class="Google Scholar">
           <img src="assets/img/icons/google.png" alt="Google Scholar" />
@@ -227,8 +206,8 @@
         </div>
         <div class="col-lg-3 col-md-4 mt-4" data-aos="fade-up" data-aos-delay="200">
           <div class="icon-box">
-            <i class='bx bx-leaf' style="font-size:32px; color:#12d640; padding-right:10px;"></i>
-            <h3>Environmental Monitoring</h3>
+            <i class='bx bx-wind' style="font-size:32px; color:#12d640; padding-right:10px;"></i>
+            <h3>Carbon Neutrality</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4" data-aos="fade-up" data-aos-delay="250">
@@ -373,14 +352,34 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>Projects</h2>
+        <h2>Projects &amp; Publications</h2>
+      </div>
+
+      <!-- Research stats bar -->
+      <div class="projects-stats-bar" data-aos="fade-up">
+        <div class="stat-item">
+          <div class="stat-number" id="stat-pubs">13</div>
+          <div class="stat-label">Publications</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="stat-cit">220+</div>
+          <div class="stat-label">Citations</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="stat-h">7</div>
+          <div class="stat-label">h-index</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="stat-yr">7</div>
+          <div class="stat-label">Years Research</div>
+        </div>
       </div>
 
       <div class="row">
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-personal">Personal</li>
+            <li data-filter=".filter-personal">First Author</li>
             <li data-filter=".filter-collaborative">Collaborative</li>
           </ul>
         </div>
@@ -389,417 +388,279 @@
       <div class="row portfolio-container">
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-personal">
-          <center><h4>Pesticide Degradation from Green Coffee Beans</h4></center>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/Pesticide.png" class="img-fluid" alt="">
+            <img src="assets/img/project/Pesticide.png" class="img-fluid" alt="Pesticide Degradation">
             <div class="portfolio-info">
               <div class="portfolio-links">
-                <a href="https://doi.org/10.1016/j.cej.2024.154364" target="_blank" rel="noopener noreferrer" title="Project Details">
-                  <i class="bx bx-info-circle"></i>
+                <a href="https://doi.org/10.1016/j.cej.2024.154364" target="_blank" rel="noopener noreferrer" title="Open Publication">
+                  <i class="bx bx-link-external"></i>
                 </a>
               </div>
             </div>
           </div>
-        </div>
-        
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-personal">
-          <center><h4>Dibutyl phthalate removal from water using OH radicals</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/DBP.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <a href="https://doi.org/10.1016/j.cej.2024.157895" target="_blank" rel="noopener noreferrer" title="Project Details">
-                  <i class="bx bx-info-circle"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-       
-        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
-          <center><h4>Spatial and temporal diagnostics of OH radicals</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/PoF.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-links">
-                <a href="https://doi.org/10.1063/5.0272728" target="_blank" rel="noopener noreferrer" title="Project Details">
-                  <i class="bx bx-info-circle"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-         
-        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
-          <center><h4>Carbamazapine degradation using APPJ generated species</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/CBZ.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-links">
-                <a href="https://doi.org/10.1016/j.jece.2025.117644" target="_blank" rel="noopener noreferrer" title="Project Details">
-                  <i class="bx bx-info-circle"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
-          <center><h4>Synergy between plasma water and seaweed biostimulants in tomato</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/sabnaj.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-links">
-                <a href="https://doi.org/10.1016/j.foodchem.2025.144747" target="_blank" rel="noopener noreferrer" title="Project Details">
-                  <i class="bx bx-info-circle"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
-          <center><h4>Enhancing growth and salinity tolerance of Pak Choi plants  </h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/Pak Choi.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <a href="https://doi.org/10.1016/j.fmre.2024.06.010" target="_blank" rel="noopener noreferrer" title="Project Details">
-                  <i class="bx bx-info-circle"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
-          <center><h4>Surface activation of polyvinyl alcohol films</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/Praj.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <a href="https://doi.org/10.1002/ppap.202300102" target="_blank" rel="noopener noreferrer" title="Project Details">
-                  <i class="bx bx-info-circle"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
-          <center><h4>THP removal from soil using ozone gas </h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/TPH.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <a href="https://doi.org/10.1016/j.envres.2023.117398" target="_blank" rel="noopener noreferrer" title="Project Details">
-                  <i class="bx bx-info-circle"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
-          <center><h4>Ampicilline removal from water using APPJ discharge </h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/Ampicilline.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <a href="https://doi.org/10.1016/j.jece.2024.113445" target="_blank" rel="noopener noreferrer" title="Project Details">
-                  <i class="bx bx-info-circle"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
-          <center><h4>Dual duty cycle for selective generation of reactive species </h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/Dual duty cycle.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <a href="https://doi.org/10.1002/ppap.202400098" target="_blank" rel="noopener noreferrer" title="Project Details">
-                  <i class="bx bx-info-circle"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
-          <center><h4>Textile dye removal using nitric oxide species</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/Textile Dye.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-links">
-                <a href="https://doi.org/10.1016/j.jenvman.2024.122554" target="_blank" rel="noopener noreferrer" title="Project Details">
-                  <i class="bx bx-info-circle"></i>
-                </a>
-              </div>
-            </div>
+          <div class="portfolio-card-meta">
+            <h5>Pesticide Degradation from Green Coffee Beans</h5>
+            <p class="pc-journal">Chemical Engineering Journal <span class="pc-year">· 2024</span></p>
+            <a href="https://doi.org/10.1016/j.cej.2024.154364" target="_blank" class="pc-doi">DOI →</a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-personal">
-          <center><h4>NTP promoting cellulase production</h4></center>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/Cellulase.png" class="img-fluid" alt="">
+            <img src="assets/img/project/DBP.png" class="img-fluid" alt="DBP Removal">
             <div class="portfolio-info">
               <div class="portfolio-links">
-                <a href="https://doi.org/10.1186/s40643-025-01006-z#Abs1" target="_blank" rel="noopener noreferrer" title="Project Details">
-                  <i class="bx bx-info-circle"></i>
+                <a href="https://doi.org/10.1016/j.cej.2024.157895" target="_blank" rel="noopener noreferrer" title="Open Publication">
+                  <i class="bx bx-link-external"></i>
                 </a>
               </div>
             </div>
           </div>
+          <div class="portfolio-card-meta">
+            <h5>Dibutyl Phthalate Removal from Water using OH Radicals</h5>
+            <p class="pc-journal">Chemical Engineering Journal <span class="pc-year">· 2024</span></p>
+            <a href="https://doi.org/10.1016/j.cej.2024.157895" target="_blank" class="pc-doi">DOI →</a>
+          </div>
         </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-personal">
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/Cellulase.png" class="img-fluid" alt="Cellulase">
+            <div class="portfolio-info">
+              <div class="portfolio-links">
+                <a href="https://doi.org/10.1186/s40643-025-01006-z#Abs1" target="_blank" rel="noopener noreferrer" title="Open Publication">
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-card-meta">
+            <h5>NTP Promoting Cellulase Production</h5>
+            <p class="pc-journal">Bioresources and Bioprocessing <span class="pc-year">· 2025</span></p>
+            <a href="https://doi.org/10.1186/s40643-025-01006-z#Abs1" target="_blank" class="pc-doi">DOI →</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/PoF.jpg" class="img-fluid" alt="OH Radicals Diagnostics">
+            <div class="portfolio-info">
+              <div class="portfolio-links">
+                <a href="https://doi.org/10.1063/5.0272728" target="_blank" rel="noopener noreferrer" title="Open Publication">
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-card-meta">
+            <h5>Spatial and Temporal Diagnostics of OH Radicals</h5>
+            <p class="pc-journal">Physics of Fluids <span class="pc-year">· 2025</span></p>
+            <a href="https://doi.org/10.1063/5.0272728" target="_blank" class="pc-doi">DOI →</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/CBZ.jpg" class="img-fluid" alt="Carbamazepine">
+            <div class="portfolio-info">
+              <div class="portfolio-links">
+                <a href="https://doi.org/10.1016/j.jece.2025.117644" target="_blank" rel="noopener noreferrer" title="Open Publication">
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-card-meta">
+            <h5>Carbamazepine Degradation using APPJ-Generated Species</h5>
+            <p class="pc-journal">J. Environmental Chemical Engineering <span class="pc-year">· 2025</span></p>
+            <a href="https://doi.org/10.1016/j.jece.2025.117644" target="_blank" class="pc-doi">DOI →</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/sabnaj.jpg" class="img-fluid" alt="Seaweed Tomato">
+            <div class="portfolio-info">
+              <div class="portfolio-links">
+                <a href="https://doi.org/10.1016/j.foodchem.2025.144747" target="_blank" rel="noopener noreferrer" title="Open Publication">
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-card-meta">
+            <h5>Synergy Between Plasma Water and Seaweed Biostimulants in Tomato</h5>
+            <p class="pc-journal">Food Chemistry <span class="pc-year">· 2025</span></p>
+            <a href="https://doi.org/10.1016/j.foodchem.2025.144747" target="_blank" class="pc-doi">DOI →</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/Pak Choi.jpg" class="img-fluid" alt="Pak Choi">
+            <div class="portfolio-info">
+              <div class="portfolio-links">
+                <a href="https://doi.org/10.1016/j.fmre.2024.06.010" target="_blank" rel="noopener noreferrer" title="Open Publication">
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-card-meta">
+            <h5>Enhancing Growth and Salinity Tolerance of Pak Choi Plants</h5>
+            <p class="pc-journal">Fundamental Research <span class="pc-year">· 2024</span></p>
+            <a href="https://doi.org/10.1016/j.fmre.2024.06.010" target="_blank" class="pc-doi">DOI →</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/Praj.jpg" class="img-fluid" alt="PVA Films">
+            <div class="portfolio-info">
+              <div class="portfolio-links">
+                <a href="https://doi.org/10.1002/ppap.202300102" target="_blank" rel="noopener noreferrer" title="Open Publication">
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-card-meta">
+            <h5>Surface Activation of Polyvinyl Alcohol Films</h5>
+            <p class="pc-journal">Plasma Processes and Polymers <span class="pc-year">· 2023</span></p>
+            <a href="https://doi.org/10.1002/ppap.202300102" target="_blank" class="pc-doi">DOI →</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/TPH.jpg" class="img-fluid" alt="TPH Soil">
+            <div class="portfolio-info">
+              <div class="portfolio-links">
+                <a href="https://doi.org/10.1016/j.envres.2023.117398" target="_blank" rel="noopener noreferrer" title="Open Publication">
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-card-meta">
+            <h5>Total Petroleum Hydrocarbon Removal from Soil using Ozone</h5>
+            <p class="pc-journal">Environmental Research <span class="pc-year">· 2023</span></p>
+            <a href="https://doi.org/10.1016/j.envres.2023.117398" target="_blank" class="pc-doi">DOI →</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/Ampicilline.jpg" class="img-fluid" alt="Ampicillin">
+            <div class="portfolio-info">
+              <div class="portfolio-links">
+                <a href="https://doi.org/10.1016/j.jece.2024.113445" target="_blank" rel="noopener noreferrer" title="Open Publication">
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-card-meta">
+            <h5>Ampicillin Removal from Water using APPJ Discharge</h5>
+            <p class="pc-journal">J. Environmental Chemical Engineering <span class="pc-year">· 2024</span></p>
+            <a href="https://doi.org/10.1016/j.jece.2024.113445" target="_blank" class="pc-doi">DOI →</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/Dual duty cycle.jpg" class="img-fluid" alt="Dual Duty Cycle">
+            <div class="portfolio-info">
+              <div class="portfolio-links">
+                <a href="https://doi.org/10.1002/ppap.202400098" target="_blank" rel="noopener noreferrer" title="Open Publication">
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-card-meta">
+            <h5>Dual Duty Cycle for Selective Generation of Reactive Species</h5>
+            <p class="pc-journal">Plasma Processes and Polymers <span class="pc-year">· 2024</span></p>
+            <a href="https://doi.org/10.1002/ppap.202400098" target="_blank" class="pc-doi">DOI →</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-collaborative">
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/Textile Dye.jpg" class="img-fluid" alt="Textile Dye">
+            <div class="portfolio-info">
+              <div class="portfolio-links">
+                <a href="https://doi.org/10.1016/j.jenvman.2024.122554" target="_blank" rel="noopener noreferrer" title="Open Publication">
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-card-meta">
+            <h5>Textile Dye Removal using Nitric Oxide Plasma Species</h5>
+            <p class="pc-journal">Journal of Environmental Management <span class="pc-year">· 2024</span></p>
+            <a href="https://doi.org/10.1016/j.jenvman.2024.122554" target="_blank" class="pc-doi">DOI →</a>
+          </div>
+        </div>
+
       </div><!-- end portfolio-container -->
+    </div>
   </section>
-
   <!-- End Project Section -->
 
 
-  <!-- ======= Publications Section ======= -->
-  <section id="publications" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Publications</h2>
-      </div>
-
-      <div class="pub-filters" data-aos="fade-up">
-        <button class="pub-filter-btn active" data-pub-filter="all">All</button>
-        <button class="pub-filter-btn" data-pub-filter="personal">First Author</button>
-        <button class="pub-filter-btn" data-pub-filter="collaborative">Collaborative</button>
-      </div>
-
-      <div id="pub-list" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="pub-item" data-pub-type="personal">
-          <p class="pub-title">Pesticide degradation from green coffee beans using non-thermal plasma</p>
-          <p class="pub-meta"><span class="pub-journal">Chemical Engineering Journal</span> &middot; 2024</p>
-          <a href="https://doi.org/10.1016/j.cej.2024.154364" target="_blank" class="pub-doi">DOI &rarr;</a>
-        </div>
-
-        <div class="pub-item" data-pub-type="personal">
-          <p class="pub-title">Dibutyl phthalate removal from water using OH radicals generated by non-thermal plasma</p>
-          <p class="pub-meta"><span class="pub-journal">Chemical Engineering Journal</span> &middot; 2024</p>
-          <a href="https://doi.org/10.1016/j.cej.2024.157895" target="_blank" class="pub-doi">DOI &rarr;</a>
-        </div>
-
-        <div class="pub-item" data-pub-type="personal">
-          <p class="pub-title">Non-thermal plasma promoting cellulase production</p>
-          <p class="pub-meta"><span class="pub-journal">Bioresources and Bioprocessing</span> &middot; 2025</p>
-          <a href="https://doi.org/10.1186/s40643-025-01006-z#Abs1" target="_blank" class="pub-doi">DOI &rarr;</a>
-        </div>
-
-        <div class="pub-item" data-pub-type="collaborative">
-          <p class="pub-title">Spatial and temporal diagnostics of OH radicals in atmospheric pressure plasma jet</p>
-          <p class="pub-meta"><span class="pub-journal">Physics of Fluids</span> &middot; 2025</p>
-          <a href="https://doi.org/10.1063/5.0272728" target="_blank" class="pub-doi">DOI &rarr;</a>
-        </div>
-
-        <div class="pub-item" data-pub-type="collaborative">
-          <p class="pub-title">Carbamazepine degradation using APPJ-generated reactive species</p>
-          <p class="pub-meta"><span class="pub-journal">Journal of Environmental Chemical Engineering</span> &middot; 2025</p>
-          <a href="https://doi.org/10.1016/j.jece.2025.117644" target="_blank" class="pub-doi">DOI &rarr;</a>
-        </div>
-
-        <div class="pub-item" data-pub-type="collaborative">
-          <p class="pub-title">Synergy between plasma water and seaweed biostimulants in tomato cultivation</p>
-          <p class="pub-meta"><span class="pub-journal">Food Chemistry</span> &middot; 2025</p>
-          <a href="https://doi.org/10.1016/j.foodchem.2025.144747" target="_blank" class="pub-doi">DOI &rarr;</a>
-        </div>
-
-        <div class="pub-item" data-pub-type="collaborative">
-          <p class="pub-title">Enhancing growth and salinity tolerance of Pak Choi plants using plasma-activated water</p>
-          <p class="pub-meta"><span class="pub-journal">Fundamental Research</span> &middot; 2024</p>
-          <a href="https://doi.org/10.1016/j.fmre.2024.06.010" target="_blank" class="pub-doi">DOI &rarr;</a>
-        </div>
-
-        <div class="pub-item" data-pub-type="collaborative">
-          <p class="pub-title">Surface activation of polyvinyl alcohol films using non-thermal plasma</p>
-          <p class="pub-meta"><span class="pub-journal">Plasma Processes and Polymers</span> &middot; 2023</p>
-          <a href="https://doi.org/10.1002/ppap.202300102" target="_blank" class="pub-doi">DOI &rarr;</a>
-        </div>
-
-        <div class="pub-item" data-pub-type="collaborative">
-          <p class="pub-title">Total petroleum hydrocarbon removal from contaminated soil using ozone gas</p>
-          <p class="pub-meta"><span class="pub-journal">Environmental Research</span> &middot; 2023</p>
-          <a href="https://doi.org/10.1016/j.envres.2023.117398" target="_blank" class="pub-doi">DOI &rarr;</a>
-        </div>
-
-        <div class="pub-item" data-pub-type="collaborative">
-          <p class="pub-title">Ampicillin removal from water using atmospheric pressure plasma jet discharge</p>
-          <p class="pub-meta"><span class="pub-journal">Journal of Environmental Chemical Engineering</span> &middot; 2024</p>
-          <a href="https://doi.org/10.1016/j.jece.2024.113445" target="_blank" class="pub-doi">DOI &rarr;</a>
-        </div>
-
-        <div class="pub-item" data-pub-type="collaborative">
-          <p class="pub-title">Dual duty cycle for selective generation of reactive plasma species</p>
-          <p class="pub-meta"><span class="pub-journal">Plasma Processes and Polymers</span> &middot; 2024</p>
-          <a href="https://doi.org/10.1002/ppap.202400098" target="_blank" class="pub-doi">DOI &rarr;</a>
-        </div>
-
-        <div class="pub-item" data-pub-type="collaborative">
-          <p class="pub-title">Textile dye removal using nitric oxide species from non-thermal plasma</p>
-          <p class="pub-meta"><span class="pub-journal">Journal of Environmental Management</span> &middot; 2024</p>
-          <a href="https://doi.org/10.1016/j.jenvman.2024.122554" target="_blank" class="pub-doi">DOI &rarr;</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <!-- End Publications Section -->
 
 
 
   
   <!-- Start Skills Section -->
-     <section id="skills" class="services">
+  <section id="skills" class="services">
     <div class="container">
       <div class="section-title">
         <h2>Skills</h2>
       </div>
-      <div class="row">
-        <div class="col-lg-12" data-aos="fade-up">
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background:#ffffff">
-            <h4 style="text-align:left;color:#09203a">Hardware</h4>
-                <p style="text-align:left;">
-                  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
 
-                    <div style="text-align: center;">
-                      <img src="assets/img/skills/CD.jpg" class="img-fluid" alt="CD" height="50" width="150">
-                      <p style="color: black; font-weight: bold;">Circular Dichroism</p>
-                    </div>
-                  
-                    <div style="text-align: center;">
-                      <img src="assets/img/skills/gas FTIR.jpg" class="img-fluid" alt="Gas FTIR" height="50" width="150">
-                      <p style="color: black; font-weight: bold;">Gas FTIR</p>
-                    </div>
-                  
-                    <div style="text-align: center;">
-                      <img src="assets/img/skills/FID.jpg" class="img-fluid" alt="GC-FID" height="50" width="150">
-                      <p style="color: black; font-weight: bold;">GC-FID</p>
-                    </div>
-
-                    <div style="text-align: center;">
-                      <img src="assets/img/skills/GCMS.jpg" class="img-fluid" alt="GC-FID" height="50" width="150">
-                      <p style="color: black; font-weight: bold;">GC-MS</p>
-                    </div>
-                  
-                    <div style="text-align: center;">
-                      <img src="assets/img/skills/voltage.jpg" class="img-fluid" alt="High Voltage" height="50" width="150">
-                      <p style="color: black; font-weight: bold;">High Voltage Measurment</p>
-                    </div>
-                  
-                    <div style="text-align: center;">
-                      <img src="assets/img/skills/HR4000.png" class="img-fluid" alt="HR4000 Spectrometer" height="50" width="150">
-                      <p style="color: black; font-weight: bold;">HR4000 Spectrometer</p>
-                    </div>
-                  
-                    <div style="text-align: center;">
-                      <img src="assets/img/skills/LCMS.jpg" class="img-fluid" alt="LC-MS" height="50" width="150">
-                      <p style="color: black; font-weight: bold;">LC-MS</p>
-                    </div>
-                    
-                    <div style="text-align: center;">
-                      <img src="assets/img/skills/monochromator.jpg" class="img-fluid" alt="LC-MS" height="50" width="150">
-                      <p style="color: black; font-weight: bold;">ICCD-Monochromator</p>
-                    </div>
-
-                  <div style="text-align: center;">
-                    <img src="assets/img/skills/Raman.jpg" class="img-fluid" alt="LC-MS" height="50" width="150">
-                    <p style="color: black; font-weight: bold;">Raman Spectroscopy</p>
-                  </div>
-
-                  <div style="text-align: center;">
-                    <img src="assets/img/skills/LIF.png" class="img-fluid" alt="LC-MS" height="50" width="150">
-                    <p style="color: black; font-weight: bold;">Laser Induced Fluorescence</p>
-                  </div>
-
-                  <div style="text-align: center;">
-                    <img src="assets/img/skills/OPA.jpg" class="img-fluid" alt="LC-MS" height="50" width="150">
-                    <p style="color: black; font-weight: bold;">OPA laser</p>
-                  </div>
-
-                  <div style="text-align: center;">
-                    <img src="assets/img/skills/SR400.jpg" class="img-fluid" alt="LC-MS" height="50" width="150">
-                    <p style="color: black; font-weight: bold;">Gated photon counter</p>
-                  </div>
-
-                  <div style="text-align: center;">
-                    <img src="assets/img/skills/XRD.jpeg" class="img-fluid" alt="LC-MS" height="50" width="150">
-                    <p style="color: black; font-weight: bold;">X-ray Diffraction</p>
-                  </div>
-
-                  <div style="text-align: center;">
-                    <img src="assets/img/skills/UVAS.jpg" class="img-fluid" alt="LC-MS" height="50" width="150">
-                    <p style="color: black; font-weight: bold;">UV Absorption Spectroscopy</p>
-                  </div>
-
-                  </div>
-                  
-                </p>
-            </div>
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background:#ffffff">
-              <h4 style="text-align:left;color:#09203a">Software</h4>
-              <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-
-                <div style="text-align: center;">
-                  <img src="assets/img/skills/office.jpg" class="img-fluid" alt="MS Office" height="50" width="150">
-                  <p style="color: black; font-weight: bold;">MS Office — Advanced</p>
-                </div>
-
-                <div style="text-align: center;">
-                  <img src="assets/img/skills/origin.png" class="img-fluid" alt="Origin Pro" height="50" width="150">
-                  <p style="color: black; font-weight: bold;">Origin Pro — Advanced</p>
-                </div>
-
-                <div style="text-align: center;">
-                  <img src="assets/img/skills/python.png" class="img-fluid" alt="Python" height="50" width="150">
-                  <p style="color: black; font-weight: bold;">Python — Beginner</p>
-                </div>
-
-                <div style="text-align: center;">
-                  <img src="assets/img/skills/matlab.png" class="img-fluid" alt="MATLAB" height="50" width="150">
-                  <p style="color: black; font-weight: bold;">MATLAB — Beginner</p>
-                </div>
-
-                <div style="text-align: center;">
-                  <img src="assets/img/skills/octave.png" class="img-fluid" alt="GNU Octave" height="50" width="150">
-                  <p style="color: black; font-weight: bold;">GNU Octave — Beginner</p>
-                </div>
-
-                <div style="text-align: center;">
-                  <img src="assets/img/skills/massive.jpg" class="img-fluid" alt="MassiveOES" height="50" width="150">
-                  <p style="color: black; font-weight: bold;">MassiveOES — Advanced</p>
-                </div>
-
-                <div style="text-align: center;">
-                  <img src="assets/img/skills/lifbase.jpg" class="img-fluid" alt="LIFBase" height="50" width="150">
-                  <p style="color: black; font-weight: bold;">LIFBase — Intermediate</p>
-                </div>
-
-              </div>
-          </div>
+      <!-- Hardware -->
+      <div class="skills-section-box" data-aos="fade-up">
+        <h4>Hardware</h4>
+        <div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center;">
+          <div class="skill-card"><img src="assets/img/skills/CD.jpg" alt="CD"><p>Circular Dichroism</p></div>
+          <div class="skill-card"><img src="assets/img/skills/gas FTIR.jpg" alt="Gas FTIR"><p>Gas FTIR</p></div>
+          <div class="skill-card"><img src="assets/img/skills/FID.jpg" alt="GC-FID"><p>GC-FID</p></div>
+          <div class="skill-card"><img src="assets/img/skills/GCMS.jpg" alt="GC-MS"><p>GC-MS</p></div>
+          <div class="skill-card"><img src="assets/img/skills/voltage.jpg" alt="High Voltage"><p>High Voltage Measurement</p></div>
+          <div class="skill-card"><img src="assets/img/skills/HR4000.png" alt="HR4000"><p>HR4000 Spectrometer</p></div>
+          <div class="skill-card"><img src="assets/img/skills/LCMS.jpg" alt="LC-MS"><p>LC-MS</p></div>
+          <div class="skill-card"><img src="assets/img/skills/monochromator.jpg" alt="ICCD-Mono"><p>ICCD-Monochromator</p></div>
+          <div class="skill-card"><img src="assets/img/skills/Raman.jpg" alt="Raman"><p>Raman Spectroscopy</p></div>
+          <div class="skill-card"><img src="assets/img/skills/LIF.png" alt="LIF"><p>Laser Induced Fluorescence</p></div>
+          <div class="skill-card"><img src="assets/img/skills/OPA.jpg" alt="OPA"><p>OPA Laser</p></div>
+          <div class="skill-card"><img src="assets/img/skills/SR400.jpg" alt="SR400"><p>Gated Photon Counter</p></div>
+          <div class="skill-card"><img src="assets/img/skills/XRD.jpeg" alt="XRD"><p>X-ray Diffraction</p></div>
+          <div class="skill-card"><img src="assets/img/skills/UVAS.jpg" alt="UVAS"><p>UV Absorption Spectroscopy</p></div>
         </div>
       </div>
+
+      <!-- Software -->
+      <div class="skills-section-box" data-aos="fade-up" data-aos-delay="100">
+        <h4>Software</h4>
+        <div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center;">
+          <div class="skill-card"><img src="assets/img/skills/office.jpg" alt="MS Office"><p>MS Office — Advanced</p></div>
+          <div class="skill-card"><img src="assets/img/skills/origin.png" alt="Origin Pro"><p>Origin Pro — Advanced</p></div>
+          <div class="skill-card"><img src="assets/img/skills/python.png" alt="Python"><p>Python — Beginner</p></div>
+          <div class="skill-card"><img src="assets/img/skills/matlab.png" alt="MATLAB"><p>MATLAB — Beginner</p></div>
+          <div class="skill-card"><img src="assets/img/skills/octave.png" alt="GNU Octave"><p>GNU Octave — Beginner</p></div>
+          <div class="skill-card"><img src="assets/img/skills/massive.jpg" alt="MassiveOES"><p>MassiveOES — Advanced</p></div>
+          <div class="skill-card"><img src="assets/img/skills/lifbase.jpg" alt="LIFBase"><p>LIFBase — Intermediate</p></div>
+        </div>
+      </div>
+
     </div>
   </section>
-
   <!-- End Skills Section -->
 
  <!-- Start Contact Section -->
-<section id="contacts" class="contact" style="position: relative; z-index: 1; overflow: hidden; margin-bottom: 60px;">
+<section id="contacts" class="contact">
   <div class="container">
 
     <div class="section-title">
@@ -852,26 +713,43 @@
 
     </div>
 
-    <!-- Contact Form -->
+    <!-- Google Form embed -->
     <div class="row mt-4" data-aos="fade-up">
       <div class="col-12">
-        <div class="info-box">
-          <i class="bx bx-message-rounded-dots"></i>
-          <h3>Send a Message</h3>
-          <form class="contact-form mt-3" id="contactForm" action="https://formspree.io/f/xwkgvnak" method="POST">
-            <div class="row">
-              <div class="col-md-6">
-                <input type="text" name="name" placeholder="Your Name" required>
-              </div>
-              <div class="col-md-6">
-                <input type="email" name="email" placeholder="Your Email" required>
-              </div>
-            </div>
-            <input type="text" name="subject" placeholder="Subject">
-            <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
-            <button type="submit">Send Message</button>
-            <div class="form-msg" id="formMsg"></div>
-          </form>
+        <div class="gform-container">
+          <!--
+            SETUP INSTRUCTIONS:
+            1. Go to forms.google.com and create a form with fields:
+               Name, Email, Subject, Message
+            2. Click Send → Embed (<>) → copy the src URL from the iframe code
+            3. Replace YOUR_GOOGLE_FORM_EMBED_URL below with that URL
+            4. Delete the gform-placeholder div and uncomment the iframe
+
+          <iframe
+            src="YOUR_GOOGLE_FORM_EMBED_URL"
+            width="100%"
+            height="680"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="Contact Form">
+            Loading...
+          </iframe>
+          -->
+          <div class="gform-placeholder">
+            <h5><i class="bx bx-message-rounded-dots" style="margin-right:8px;"></i>Send a Message</h5>
+            <p style="margin-bottom:14px; font-size:0.9rem;">
+              To activate the contact form, create a <strong style="color:#12d640;">Google Form</strong> with fields:<br>
+              Name · Email · Subject · Message
+            </p>
+            <p style="font-size:0.85rem; margin-bottom:18px;">
+              Then embed it here by replacing <code>YOUR_GOOGLE_FORM_EMBED_URL</code><br>in the comment block above.
+            </p>
+            <p style="font-size:0.9rem;">
+              In the meantime, reach me directly at<br>
+              <a href="mailto:kirubelamsalu12@gmail.com" style="color:#12d640; font-weight:600;">kirubelamsalu12@gmail.com</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -906,81 +784,52 @@
 
   <!-- AOS Animate on Scroll -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ duration: 700, once: true });</script>
+  <script>AOS.init({ duration: 700, once: false, offset: 0, delay: 0 });</script>
 
   <!-- Back to top button -->
   <a href="#header" class="back-to-top" id="backToTop" title="Back to top">
     <i class="bx bx-up-arrow-alt"></i>
   </a>
 
-  <!-- Publication filter -->
-  <script>
-  document.querySelectorAll('.pub-filter-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.pub-filter-btn').forEach(function(b) { b.classList.remove('active'); });
-      this.classList.add('active');
-      var filter = this.getAttribute('data-pub-filter');
-      document.querySelectorAll('#pub-list .pub-item').forEach(function(item) {
-        item.style.display = (filter === 'all' || item.getAttribute('data-pub-type') === filter) ? 'block' : 'none';
-      });
-    });
-  });
-  </script>
-
-  <!-- Back to top visibility -->
-  <script>
-  window.addEventListener('scroll', function() {
-    var btn = document.getElementById('backToTop');
-    if (btn) { btn.classList.toggle('visible', window.scrollY > 300); }
-  });
-  </script>
-
-  <!-- Contact form AJAX -->
-  <script>
-  var form = document.getElementById('contactForm');
-  if (form) {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var msg = document.getElementById('formMsg');
-      fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      }).then(function(r) {
-        if (r.ok) {
-          msg.className = 'form-msg success';
-          msg.textContent = 'Message sent! I will get back to you soon.';
-          form.reset();
-        } else {
-          msg.className = 'form-msg error';
-          msg.textContent = 'Something went wrong. Please email me directly.';
-        }
-      }).catch(function() {
-        msg.className = 'form-msg error';
-        msg.textContent = 'Network error. Please email me directly.';
-      });
-    });
-  }
-  </script>
-
-  <!-- Hero stat counters -->
+  <!-- Back-to-top: show whenever a section is active (not on home) -->
   <script>
   (function() {
-    function animateCounters() {
-      document.querySelectorAll('.hero-stat-number').forEach(function(el) {
-        var target = parseInt(el.getAttribute('data-target'), 10);
-        var duration = 1800;
-        var step = target / (duration / 16);
-        var current = 0;
-        var timer = setInterval(function() {
+    var btn = document.getElementById('backToTop');
+    function updateBackToTop() {
+      if (btn) btn.classList.toggle('visible', document.getElementById('header').classList.contains('header-top'));
+    }
+    var observer = new MutationObserver(updateBackToTop);
+    observer.observe(document.getElementById('header'), { attributes: true, attributeFilter: ['class'] });
+  })();
+  </script>
+
+  <!-- Projects stats counter — runs once when #portfolio section becomes visible -->
+  <script>
+  (function() {
+    var ran = false;
+    function animateStats() {
+      if (ran) return;
+      ran = true;
+      [['stat-pubs', 13], ['stat-cit', null], ['stat-h', 7], ['stat-yr', 7]].forEach(function(pair) {
+        var el = document.getElementById(pair[0]);
+        if (!el || pair[1] === null) return;
+        var target = pair[1], current = 0, step = target / (1600 / 16);
+        var t = setInterval(function() {
           current += step;
-          if (current >= target) { current = target; clearInterval(timer); }
+          if (current >= target) { current = target; clearInterval(t); }
           el.textContent = Math.floor(current);
         }, 16);
       });
     }
-    // Run once when header is visible (on page load)
-    window.addEventListener('load', function() { setTimeout(animateCounters, 600); });
+    // Observe when portfolio section gets section-show class
+    var portfolio = document.getElementById('portfolio');
+    if (portfolio) {
+      new MutationObserver(function(mutations) {
+        mutations.forEach(function(m) {
+          if (portfolio.classList.contains('section-show')) animateStats();
+        });
+      }).observe(portfolio, { attributes: true, attributeFilter: ['class'] });
+    }
   })();
   </script>
 

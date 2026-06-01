@@ -49,21 +49,18 @@ h1, h2, h3, h4, h5, h6 {
   background: url('../img/background/contact.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  left: 0;
-  right: 0;
-  top: 50;
-  height: 100vh;
-
+  height: auto;
+  padding-bottom: 60px;
 }
 
 
 
 #about {
-  position: relative;
   background: url('../img/background/About.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  height: 200vh;
+  height: auto;
+  padding-bottom: 60px;
 }
 
 #about::before {
@@ -319,13 +316,20 @@ h1, h2, h3, h4, h5, h6 {
   background: #09203a;
 }
 
-#header.header-top .social-links, #header.header-top h2 {
+#header.header-top .social-links,
+#header.header-top h2,
+#header.header-top .hero-stats {
   display: none;
 }
 
 #header.header-top h1 {
   margin-right: auto;
-  font-size: 36px;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  line-height: 1.2;
 }
 
 #header.header-top .container {
@@ -342,7 +346,8 @@ h1, h2, h3, h4, h5, h6 {
     height: 60px;
   }
   #header.header-top h1 {
-    font-size: 26px;
+    font-size: 14px;
+    max-width: 130px;
   }
 }
 
@@ -350,7 +355,7 @@ h1, h2, h3, h4, h5, h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  overflow: hidden;
+  overflow: visible;
   position: absolute;
   width: 100%;
   top: 140px;
@@ -360,10 +365,11 @@ section {
 }
 
 section.section-show {
-  top: 70px;
+  top: 95px;
   bottom: auto;
   opacity: 1;
-  padding-bottom: 0px;
+  padding-bottom: 60px;
+  min-height: calc(100vh - 95px);
 }
 
 section .container {
@@ -376,7 +382,8 @@ section .container {
     top: 120px;
   }
   section.section-show {
-    top: 80px;
+    top: 65px;
+    min-height: calc(100vh - 65px);
   }
 }
 
@@ -388,8 +395,9 @@ section .container {
   margin: 0 0 20px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #dee2e6;
+  color: #b8d4f0;
   font-family: "Poppins", sans-serif;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
 }
 
 .section-title h2::after {
@@ -409,6 +417,7 @@ section .container {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
 /*--------------------------------------------------------------
@@ -1109,6 +1118,174 @@ section .container {
 }
 
 /*--------------------------------------------------------------
+# Skills — dark instrument cards
+--------------------------------------------------------------*/
+.skill-card {
+  background: #0a1e35;
+  border: 1px solid rgba(18, 214, 64, 0.35);
+  border-radius: 8px;
+  padding: 14px 10px 10px;
+  text-align: center;
+  width: 160px;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.skill-card:hover {
+  border-color: #12d640;
+  box-shadow: 0 0 10px rgba(18, 214, 64, 0.3);
+}
+
+.skill-card img {
+  width: 120px;
+  height: 80px;
+  object-fit: contain;
+  background: rgba(255,255,255,0.06);
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.skill-card p {
+  color: #dee2e6 !important;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin: 8px 0 0;
+}
+
+.skills-section-box {
+  background: rgba(9, 32, 58, 0.85);
+  border: 1px solid rgba(18,214,64,0.2);
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.skills-section-box h4 {
+  color: #12d640 !important;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
+# Portfolio card info (below image)
+--------------------------------------------------------------*/
+.portfolio-card-meta {
+  background: rgba(9, 32, 58, 0.92);
+  padding: 10px 12px 12px;
+  border-top: 2px solid rgba(18,214,64,0.4);
+}
+
+.portfolio-card-meta h5 {
+  font-size: 0.88rem;
+  color: #fff;
+  font-weight: 600;
+  margin: 0 0 5px;
+  line-height: 1.35;
+}
+
+.portfolio-card-meta .pc-journal {
+  font-size: 0.76rem;
+  color: #12d640;
+  font-weight: 500;
+  margin: 0 0 6px;
+}
+
+.portfolio-card-meta .pc-year {
+  color: #adb5bd;
+}
+
+.portfolio-card-meta a.pc-doi {
+  font-size: 0.74rem;
+  color: #12d640;
+  border: 1px solid rgba(18,214,64,0.4);
+  padding: 2px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.portfolio-card-meta a.pc-doi:hover {
+  background: #12d640;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Stats bar inside Projects section */
+.projects-stats-bar {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(9,32,58,0.7);
+  border: 1px solid rgba(18,214,64,0.25);
+  border-radius: 10px;
+  padding: 18px 30px;
+  margin-bottom: 25px;
+}
+
+.projects-stats-bar .stat-item {
+  text-align: center;
+}
+
+.projects-stats-bar .stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #12d640;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+}
+
+.projects-stats-bar .stat-label {
+  font-size: 0.72rem;
+  color: #adb5bd;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+/*--------------------------------------------------------------
+# Google Form container
+--------------------------------------------------------------*/
+.gform-container {
+  background: rgba(9,32,58,0.8);
+  border: 1px solid rgba(18,214,64,0.25);
+  border-radius: 10px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.gform-container iframe {
+  border: none;
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+.gform-placeholder {
+  background: rgba(9,32,58,0.6);
+  border: 2px dashed rgba(18,214,64,0.4);
+  border-radius: 8px;
+  padding: 40px 30px;
+  text-align: center;
+  color: #adb5bd;
+}
+
+.gform-placeholder h5 {
+  color: #12d640;
+  margin-bottom: 10px;
+}
+
+.gform-placeholder code {
+  background: rgba(18,214,64,0.15);
+  color: #12d640;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+/*--------------------------------------------------------------
 # Timeline (Education & Experience)
 --------------------------------------------------------------*/
 .timeline {
@@ -1173,8 +1350,12 @@ section .container {
 }
 
 .timeline-item .tl-body {
-  color: #dee2e6;
+  color: #e8eef5;
   font-size: 0.9rem;
+  background: rgba(9,32,58,0.55);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-top: 8px;
 }
 
 .timeline-item .tl-body ul {
@@ -1183,7 +1364,8 @@ section .container {
 }
 
 .timeline-item .tl-body ul li {
-  padding-bottom: 4px;
+  padding-bottom: 6px;
+  line-height: 1.5;
 }
 
 .timeline-item .tl-course-tags {
