@@ -929,6 +929,10 @@
     }
 
     window.addEventListener('resize', resize);
+    // ResizeObserver catches header height change (100vh → 90px) that window resize misses
+    if (window.ResizeObserver) {
+      new ResizeObserver(function() { resize(); }).observe(canvas.parentElement);
+    }
     resize();
 
     function draw() {

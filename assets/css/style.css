@@ -1634,27 +1634,7 @@ section .container {
   transition: left 0.55s ease, opacity 0.1s ease;
 }
 
-/* Skill card float animation */
-@keyframes skill-float {
-  0%   { transform: translateY(0px);  }
-  50%  { transform: translateY(-5px); }
-  100% { transform: translateY(0px);  }
-}
-.skill-card {
-  animation: skill-float 3.5s ease-in-out infinite;
-}
-.skill-card:nth-child(2)  { animation-delay: 0.3s; }
-.skill-card:nth-child(3)  { animation-delay: 0.6s; }
-.skill-card:nth-child(4)  { animation-delay: 0.9s; }
-.skill-card:nth-child(5)  { animation-delay: 1.2s; }
-.skill-card:nth-child(6)  { animation-delay: 1.5s; }
-.skill-card:nth-child(7)  { animation-delay: 1.8s; }
-.skill-card:nth-child(8)  { animation-delay: 2.1s; }
-.skill-card:nth-child(9)  { animation-delay: 2.4s; }
-.skill-card:nth-child(10) { animation-delay: 2.7s; }
-.skill-card:nth-child(11) { animation-delay: 3.0s; }
-.skill-card:nth-child(12) { animation-delay: 3.3s; }
-.skill-card:hover { animation-play-state: paused; transform: translateY(-6px) scale(1.04); }
+.skill-card:hover { transform: translateY(-6px) scale(1.04); }
 
 /* Skills section box fade-slide on section open */
 @keyframes slide-up-fade {

@@ -128,36 +128,35 @@
     }
   });
 
-  // Porfolio isotope and filter
-  $(window).on('load', function() {
-    var portfolioIsotope = $('.portfolio-container').isotope({
+  // Portfolio isotope: lazy-init on first section open so items have real dimensions
+  var portfolioIsotope = null;
+  function initIsotope() {
+    if (portfolioIsotope) { portfolioIsotope.isotope('layout'); return; }
+    portfolioIsotope = $('.portfolio-container').isotope({
       itemSelector: '.portfolio-item',
       layoutMode: 'fitRows'
     });
-
-    $('#portfolio-flters li').on('click', function() {
-      $("#portfolio-flters li").removeClass('filter-active');
+    $('#portfolio-flters li').off('click').on('click', function() {
+      $('#portfolio-flters li').removeClass('filter-active');
       $(this).addClass('filter-active');
       portfolioIsotope.isotope({ filter: $(this).data('filter') });
-      // Re-layout after filter to ensure items are positioned correctly
-      setTimeout(function() { portfolioIsotope.isotope('layout'); }, 50);
     });
+  }
 
-    // Re-layout when portfolio section becomes visible (section is hidden until nav click)
-    var portfolioSection = document.getElementById('portfolio');
-    if (portfolioSection) {
-      new MutationObserver(function(mutations) {
-        mutations.forEach(function(m) {
-          if (portfolioSection.classList.contains('section-show')) {
-            setTimeout(function() { portfolioIsotope.isotope('layout'); }, 400);
-          }
-        });
-      }).observe(portfolioSection, { attributes: true, attributeFilter: ['class'] });
+  var portfolioSection = document.getElementById('portfolio');
+  if (portfolioSection) {
+    new MutationObserver(function() {
+      if (portfolioSection.classList.contains('section-show')) {
+        setTimeout(initIsotope, 150);
+      }
+    }).observe(portfolioSection, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  // Also init on window load if page opens directly with #portfolio hash
+  $(window).on('load', function() {
+    if (portfolioSection && portfolioSection.classList.contains('section-show')) {
+      initIsotope();
     }
-  });
-
-  // Initiate venobox (lightbox feature used in portofilo)
-  $(document).ready(function() {
     $('.venobox').venobox();
   });
 
