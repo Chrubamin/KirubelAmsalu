@@ -128,35 +128,20 @@
     }
   });
 
-  // Portfolio isotope: lazy-init on first section open so items have real dimensions
-  var portfolioIsotope = null;
-  function initIsotope() {
-    if (portfolioIsotope) { portfolioIsotope.isotope('layout'); return; }
-    portfolioIsotope = $('.portfolio-container').isotope({
-      itemSelector: '.portfolio-item',
-      layoutMode: 'fitRows'
-    });
-    $('#portfolio-flters li').off('click').on('click', function() {
-      $('#portfolio-flters li').removeClass('filter-active');
-      $(this).addClass('filter-active');
-      portfolioIsotope.isotope({ filter: $(this).data('filter') });
-    });
-  }
-
-  var portfolioSection = document.getElementById('portfolio');
-  if (portfolioSection) {
-    new MutationObserver(function() {
-      if (portfolioSection.classList.contains('section-show')) {
-        setTimeout(initIsotope, 150);
-      }
-    }).observe(portfolioSection, { attributes: true, attributeFilter: ['class'] });
-  }
-
-  // Also init on window load if page opens directly with #portfolio hash
-  $(window).on('load', function() {
-    if (portfolioSection && portfolioSection.classList.contains('section-show')) {
-      initIsotope();
+  // Portfolio filtering — plain jQuery show/hide (no Isotope layout conflicts)
+  $('#portfolio-flters li').on('click', function() {
+    $('#portfolio-flters li').removeClass('filter-active');
+    $(this).addClass('filter-active');
+    var filter = $(this).data('filter');
+    if (filter === '*') {
+      $('.portfolio-item').show();
+    } else {
+      $('.portfolio-item').not(filter).hide();
+      $('.portfolio-item').filter(filter).show();
     }
+  });
+
+  $(window).on('load', function() {
     $('.venobox').venobox();
   });
 
