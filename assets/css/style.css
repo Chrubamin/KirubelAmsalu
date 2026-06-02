@@ -1698,15 +1698,8 @@ section .container {
 .section-show .interests .col-lg-3:nth-child(5) .icon-box { animation-delay: 0.45s; }
 .section-show .interests .col-lg-3:nth-child(6) .icon-box { animation-delay: 0.55s; }
 
-/* Portfolio card entrance */
-@keyframes card-in {
-  from { transform: translateY(20px); opacity: 0; }
-  to   { transform: translateY(0);    opacity: 1; }
-}
-.section-show .portfolio-item {
-  animation: card-in 0.45s ease forwards;
-  opacity: 0;
-}
+/* Portfolio card entrance — applied once via JS, not CSS, to avoid opacity
+   conflicts when jQuery show/hide toggles display:none → block on filtering */
 
 /* Contact info-box entrance */
 @keyframes info-box-in {

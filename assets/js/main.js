@@ -128,17 +128,18 @@
     }
   });
 
-  // Portfolio filtering — plain jQuery show/hide (no Isotope layout conflicts)
-  $('#portfolio-flters li').on('click', function() {
+  // Portfolio filtering — delegated, explicit style control, no animation conflicts
+  $(document).on('click', '#portfolio-flters li', function() {
     $('#portfolio-flters li').removeClass('filter-active');
     $(this).addClass('filter-active');
     var filter = $(this).data('filter');
-    if (filter === '*') {
-      $('.portfolio-item').show();
-    } else {
-      $('.portfolio-item').not(filter).hide();
-      $('.portfolio-item').filter(filter).show();
-    }
+    $('.portfolio-item').each(function() {
+      if (filter === '*' || $(this).hasClass(filter.replace('.', ''))) {
+        $(this).css('display', '');
+      } else {
+        $(this).css('display', 'none');
+      }
+    });
   });
 
   $(window).on('load', function() {
