@@ -362,6 +362,7 @@ section {
   bottom: 100%;
   opacity: 0;
   z-index: 2;
+  pointer-events: none;
 }
 
 section.section-show {
@@ -371,6 +372,7 @@ section.section-show {
   padding-top: 100px;
   padding-bottom: 80px;
   min-height: 100vh;
+  pointer-events: auto;
 }
 
 section .container {
@@ -904,7 +906,8 @@ section .container {
   z-index: 4;
 }
 
-.portfolio .portfolio-wrap .portfolio-links a {
+.portfolio .portfolio-wrap .portfolio-links a,
+.portfolio .portfolio-wrap .portfolio-links i {
   color: #fff;
   margin: 0 2px;
   font-size: 28px;
@@ -912,8 +915,13 @@ section .container {
   transition: 0.3s;
 }
 
-.portfolio .portfolio-wrap .portfolio-links a:hover {
+.portfolio .portfolio-wrap .portfolio-links a:hover,
+.portfolio .portfolio-wrap a.portfolio-info:hover .portfolio-links i {
   color: #63eda3;
+}
+
+.portfolio .portfolio-wrap a.portfolio-info {
+  text-decoration: none;
 }
 
 .portfolio .portfolio-wrap:hover::before {
